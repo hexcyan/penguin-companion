@@ -11,13 +11,18 @@ import chapters from '../chapters.json'
             Russian Course<br>
             Companion Site<br>
         </h1>
+        <hr>
+        <div class="contents">
+            {
+                chapters.map( (chapter, index) => (
+                    <Chapter no={index + 1} title={chapter} />
+                ))
+            }
+        </div>
     </div>
-    <hr>
-    <div class="contents">
-        {
-            chapters.map( (chapter, index) => (
-                <Chapter no={index + 1} title={chapter} />
-            ))
-        }
-    </div>
+    
+    <footer>
+        <a href="/about">about</a>
+        <a href="/devlog">devlog</a>
+    </footer>
 </aside>

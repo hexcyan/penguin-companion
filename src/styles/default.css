@@ -29,24 +29,32 @@ html{
 }
 
 aside {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
     background: var(--primary);
     margin: 0;
-    padding: 48px;
+    padding: 0;
     color: white;
-    width: 300px;
-    min-height: calc(100vh - 96px);
-    max-height: calc(100vh - 96px);
+    width: 320px;
+    min-height: calc(100vh);
+    max-height: calc(100vh);
     font-family: 'Josefin Sans', sans-serif;
-
+    text-transform: uppercase;
 }
-
+aside > div > h1 {
+    font-size: 1.15em;
+    line-height: 1.1em;
+    margin-top: 48px;
+}
 hr {
-    margin: 32px;
+    margin: 32px 64px;
 }
 
 .contents {
-    max-height: calc(100vh - 300px);
+    max-height: calc(100vh - 280px);
     overflow: hidden;
+    margin: 0 32px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -59,11 +67,21 @@ hr {
     display:none;
 }
 
+aside > footer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background: #E83126;
+    width: 100%;
+    padding: 20px 0;
+}
+
 
 .chapter {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    font-size: 0.8em;
 }
 
 .chapter:hover {
@@ -90,9 +108,16 @@ body {
     background-color: var(--light);
 }
 
-.content-box{
-    /* display: flex; */
-    /* justify-content: center; */
-    margin: 50px auto;
+.content-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+    
+}
+
+.content-box > div {
+    margin: auto;
+    max-width: 45em;
 
 }
