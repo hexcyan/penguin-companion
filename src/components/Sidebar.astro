@@ -1,0 +1,23 @@
+---
+import Chapter from './Chapter.astro'
+import chapters from '../chapters.json'
+---
+
+<aside>
+    <div>
+        <h1>
+            The Unofficial<br>
+            New Penguin<br>
+            Russian Course<br>
+            Companion Site<br>
+        </h1>
+    </div>
+    <hr>
+    <div class="contents">
+        {
+            chapters.map( (chapter, index) => (
+                <Chapter no={index + 1} title={chapter} />
+            ))
+        }
+    </div>
+</aside>

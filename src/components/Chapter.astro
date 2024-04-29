@@ -1,0 +1,14 @@
+---
+interface Props {
+	no: number;
+	title: string;
+}
+
+const { no, title } = Astro.props;
+---
+<a href={no.toString()}>
+    <div class="chapter">
+        <p><strong>{no}</strong></p>
+        <p>{title}</p>
+    </div>
+</a>
