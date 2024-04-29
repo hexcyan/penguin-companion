@@ -5,14 +5,20 @@ interface Props {
 	image: string;
 	name: string;
 	description: string;
-	color: Color;
+	color?: Color;
 }
 
 const { image, name, description, color } = Astro.props;
 ---
 
-<div>
+<div class="profile">
     <img src={image}>
     <h4>{name}</h4>
     <p>{description}</p>
 </div>
+
+<style>
+    .profile {
+        background-color: {color};
+    }
+</style>
