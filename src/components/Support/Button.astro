@@ -1,0 +1,24 @@
+---
+import type { Color } from '../../consts';
+
+interface Props {
+	icons?: string[];
+	title: string;
+    color: Color;
+}
+
+const { icons, title, color } = Astro.props;
+---
+
+<div class="button" style={`background: ${color};`}>
+    <div>
+    {
+        icons?.map((icon: String) => {
+            return <img src={`/${icon}.svg`}></img>
+        })
+    }
+    </div>
+
+    <p>{title}</p>
+</div>
+
