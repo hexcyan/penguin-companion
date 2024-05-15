@@ -12,7 +12,7 @@
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
+    src: url('/fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
 }
 
 /* josefin-sans-700 */
@@ -21,7 +21,7 @@
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/josefin-sans-v32-latin-700.woff2') format('woff2');
+    src: url('/fonts/josefin-sans-v32-latin-700.woff2') format('woff2');
 }
 
 aside {
@@ -39,7 +39,7 @@ aside {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
 }
-aside > div > h1 {
+aside > * h1 {
     font-size: 1.15em;
     line-height: 1.1em;
     margin-top: 48px;
@@ -111,13 +111,14 @@ body {
     display: flex;
     justify-content: center;
     padding: 48px;
-    
+    overflow-y: scroll;
+    max-height: calc(100vh - 96px);
+    align-self: center;
 }
 
-.content-box > div {
-    margin: auto;
+.content-box > article {
+    margin: 32px auto;
     max-width: 38em;
-
 }
 
 
@@ -138,4 +139,27 @@ body {
 
 .profile > h4 {
     letter-spacing: 0.1rem;
+}
+
+.button {
+    display: flex;
+    height: 32px;
+    padding: 12px;
+    
+}
+
+.button > div {
+    display: flex;
+}
+
+.button > div > img {
+    height: 100%;
+}
+
+.tag {
+    background: #F86233;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 4px;
 }
