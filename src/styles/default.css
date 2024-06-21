@@ -98,6 +98,9 @@ a {
 h1 {
     text-align: center;
 }
+h4 {
+    margin: 4px 0;
+}
 
 body {
     display: flex;
@@ -110,15 +113,16 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 48px;
+    padding: 64px;
     overflow-y: scroll;
-    max-height: calc(100vh - 96px);
+    max-height: calc(100vh - 128px);
     align-self: center;
 }
 
 .content-box > article {
-    margin: 32px auto;
     max-width: 38em;
+    width: 100%;
+    height: fit-content;
 }
 
 
@@ -156,10 +160,18 @@ body {
     height: 100%;
 }
 
+/* Blog */
+.blog-post {
+    border: var(--primary) dotted 2px;
+    padding: 8px;
+    width: inherit;
+    margin: 12px;
+}
+
+
 .tag {
     background: #F86233;
-    padding: 8px 12px;
+    padding: 4px 8px;
     text-align: center;
-    border-radius: 4px;
     margin-right: 4px;
 }
