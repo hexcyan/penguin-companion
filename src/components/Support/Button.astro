@@ -11,13 +11,11 @@ const { icons, title, color } = Astro.props;
 ---
 
 <div class="button" style={`background: ${color};`}>
-    <div>
     {
         icons?.map((icon: String) => {
             return <img src={`/${icon}.svg`}></img>
         })
     }
-    </div>
 
     <p>{title}</p>
 </div>

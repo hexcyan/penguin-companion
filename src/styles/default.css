@@ -48,6 +48,18 @@ hr {
     margin: 32px 64px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    text-align: center;
+}
+h4 {
+    margin: 4px 0;
+}
+
 .contents {
     max-height: calc(100vh - 280px);
     overflow: hidden;
@@ -88,18 +100,6 @@ aside > footer {
 
 .chapter > p {
     margin: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-h1 {
-    text-align: center;
-}
-h4 {
-    margin: 4px 0;
 }
 
 body {
@@ -145,19 +145,24 @@ body {
     letter-spacing: 0.1rem;
 }
 
+/* Support */
 .button {
     display: flex;
     height: 32px;
-    padding: 12px;
-    
+    padding: 8px 12px;
+    border-radius: 4px;
+    width:fit-content;
+    align-items: center;
+    gap: 8px;
 }
 
-.button > div {
+.button > img {
+    height: 80%;
+}
+
+.support {
     display: flex;
-}
-
-.button > div > img {
-    height: 100%;
+    gap: 4px;
 }
 
 /* Blog */
