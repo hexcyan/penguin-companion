@@ -4,21 +4,28 @@ import type { Color } from '../consts';
 interface Props {
 	image: string;
 	name: string;
-	description: string;
 	color?: Color;
 }
 
-const { image, name, description, color } = Astro.props;
+const { image, name, color } = Astro.props;
 ---
 
 <div class="profile">
     <img src={image}>
-    <h4>{name}</h4>
-    <p>{description}</p>
+    <div>
+        <h4>{name}</h4>
+        <slot />
+    </div>
 </div>
 
 <style>
     .profile {
+        display: flex;
+        flex-grow: 1;
         background-color: {color};
+    }
+
+    .profile > div {
+        padding: 24px;
     }
 </style>

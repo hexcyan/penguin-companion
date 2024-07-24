@@ -6,8 +6,7 @@ type HEX = `#${string}`;
 export type Color = RGB | RGBA | HEX;
 
 interface Payment {
-  name: string,
-  url: string,
-  color: Color;
+    name: string;
+    url: string;
+    color: Color;
 }
-

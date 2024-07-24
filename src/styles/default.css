@@ -1,32 +1,32 @@
 :root {
-    --primary: #F86233;
-    --primary-100: #FB7B44;
-    --primary-200: #FFA665;
-    --light: #FCF4E8;
-    --dark: #25171A;
+    --primary: #f86233;
+    --primary-100: #fb7b44;
+    --primary-200: #ffa665;
+    --light: #fcf4e8;
+    --dark: #25171a;
 }
 
 /* josefin-sans-regular */
 @font-face {
     font-display: swap;
-    font-family: 'Josefin Sans';
+    font-family: "Josefin Sans";
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
+    src: url("/fonts/josefin-sans-v32-latin-regular.woff2") format("woff2");
 }
 
 /* josefin-sans-700 */
 @font-face {
     font-display: swap;
-    font-family: 'Josefin Sans';
+    font-family: "Josefin Sans";
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/josefin-sans-v32-latin-700.woff2') format('woff2');
+    src: url("/fonts/josefin-sans-v32-latin-700.woff2") format("woff2");
 }
 
 aside {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: space-between;
     background: var(--primary);
     margin: 0;
@@ -36,7 +36,7 @@ aside {
     min-width: 300px;
     min-height: calc(100vh);
     max-height: calc(100vh);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     text-transform: uppercase;
 }
 aside > * h1 {
@@ -64,8 +64,8 @@ h4 {
     max-height: calc(100vh - 280px);
     overflow: hidden;
     margin: 0 32px;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .contents:hover {
@@ -73,19 +73,18 @@ h4 {
 }
 
 .contents::-webkit-scrollbar {
-    display:none;
+    display: none;
 }
 
 aside > footer {
     display: flex;
     justify-content: center;
     gap: 16px;
-    background: #E83126;
+    background: #e83126;
     width: 100%;
     padding: 16px 0;
     font-size: 0.8em;
 }
-
 
 .chapter {
     display: flex;
@@ -125,7 +124,6 @@ body {
     height: fit-content;
 }
 
-
 /* About */
 .about-card {
     display: flex;
@@ -134,7 +132,7 @@ body {
 }
 
 .profile {
-    background-color: #E83126;
+    background-color: #e83126;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,7 +149,7 @@ body {
     height: 32px;
     padding: 8px 12px;
     border-radius: 4px;
-    width:fit-content;
+    width: fit-content;
     align-items: center;
     gap: 8px;
 }
@@ -173,9 +171,8 @@ body {
     margin: 12px;
 }
 
-
 .tag {
-    background: #F86233;
+    background: #f86233;
     padding: 4px 8px;
     text-align: center;
     margin-right: 4px;
