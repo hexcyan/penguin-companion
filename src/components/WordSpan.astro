@@ -1,0 +1,58 @@
+---
+import wordsJson from './words.json';
+interface Word {
+    en: string;
+    audio: string;
+    phon?: string;
+    stress?: string;
+    note?: string;
+}
+
+type mapType = {
+    [key: string]: Word;
+};
+
+const words = wordsJson as mapType;
+
+interface Props {
+  word: string;
+}
+
+const { word } = Astro.props;
+const wordData: Word | undefined = words[word];  // Ensure proper typing and handle undefined case
+---
+
+<word-span data-word={JSON.stringify(wordData)}>
+  <span class="word">
+    {word}
+  </span>
+</word-span>
+
+<script>
+    class WordSpan extends HTMLElement {
+      constructor() {
+        super();
+      }
+  
+      connectedCallback() {
+        const wordSpans = this.querySelectorAll("span.word");
+        const wordDataString = this.dataset.word;
+        const wordData = wordDataString ? JSON.parse(wordDataString) : null;
+  
+        if (wordData && wordSpans) {
+          wordSpans.forEach((wordSpan) => {
+            wordSpan.addEventListener("click", () => {
+              if (wordData.audio) {
+                const audio = new Audio(wordData.audio);
+                audio.play();
+              }
+            });
+          });
+          console.log(wordData);
+        }
+      }
+    }
+  
+    customElements.define("word-span", WordSpan);
+  </script>
+  
