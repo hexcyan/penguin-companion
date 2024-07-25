@@ -1,32 +1,32 @@
 {
     "нет": {
         "en": "no",
-        "audio": "/audio/1/нет.ogg",
+        "audio": "/audios/1/нет.ogg",
         "phon": "nyet"
     },
     "Москва": {
         "en": "Moscow",
-        "audio": "/audio/1/Москва.ogg",
+        "audio": "/audios/1/Москва.ogg",
         "phon": "mask-va"
     },
     "метро": {
         "en": "metro, underground railway",
-        "audio": "/audio/1/метро.ogg",
+        "audio": "/audios/1/метро.ogg",
         "phon": "mye-tro"
     },
     "он": {
         "en": "he",
-        "audio": "/audio/1/он.ogg",
+        "audio": "/audios/1/он.ogg",
         "phon": "on"
     },
     "она": {
         "en": "she",
-        "audio": "/audio/1/она.ogg",
+        "audio": "/audios/1/она.ogg",
         "phon": "a-na"
     },
     "сестра": {
         "en": "sister",
-        "audio": "/audio/1/сестра.ogg",
+        "audio": "/audios/1/сестра.ogg",
         "phon": "sye-stra"
     }
 }
