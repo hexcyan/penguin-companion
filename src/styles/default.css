@@ -24,6 +24,15 @@
     src: url("/fonts/josefin-sans-v32-latin-700.woff2") format("woff2");
 }
 
+/* lora-400 */
+@font-face {
+    font-display: swap;
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/Lora-Regular.woff2") format("woff2");
+}
+
 aside {
     display: flex;
     flex-direction: column;
@@ -122,7 +131,18 @@ body {
     max-width: 38em;
     width: 100%;
     height: fit-content;
+    font-family: "Lora", serif;
+
+    header {
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    hr {
+        margin: 12px auto;
+        width: 30%;
+    }
 }
+
 
 /* About */
 .about-card {
@@ -176,4 +196,26 @@ body {
     padding: 4px 8px;
     text-align: center;
     margin-right: 4px;
+}
+
+span.word {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.5;
+    padding: 4px;
+    align-items:center;
+    cursor: pointer;
+}
+
+span.word > img {
+    height: 1em;
+    margin-right: 5px
+}
+
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 0 16px;
 }

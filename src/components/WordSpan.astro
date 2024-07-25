@@ -19,11 +19,12 @@ interface Props {
 }
 
 const { word } = Astro.props;
-const wordData: Word | undefined = words[word];  // Ensure proper typing and handle undefined case
+const wordData: Word | undefined = words[word];
 ---
 
 <word-span data-word={JSON.stringify(wordData)}>
   <span class="word">
+    <img src={`/speaker.svg`}></img>
     {word}
   </span>
 </word-span>

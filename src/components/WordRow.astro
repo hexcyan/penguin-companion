@@ -1,0 +1,41 @@
+---
+import wordsJson from './words.json';
+import WordSpan from './WordSpan.astro';
+interface Word {
+    en: string;
+    phon?: string;
+    audio: string;
+    stress?: string;
+    note?: string;
+}
+
+type mapType = {
+    [key: string]: Word;
+};
+
+const words = wordsJson as mapType;
+
+interface Props {
+  word: string;
+}
+
+const { word } = Astro.props;
+const wordData: Word | undefined = words[word];
+---
+
+<tr class="wordRow">
+    <td>
+        <WordSpan word={word}/>
+    </td>
+    {
+        wordData ? (
+            Object.entries(wordData).map(([key, value]) => (
+                key !== "audio" && key !== "note" && (
+                    key === "phon" ? <td>[{value}]</td> : <td>{value}</td>
+                )
+            ))
+        ) : (
+            <p>{word} not found.</p>
+        )
+    }
+</tr>

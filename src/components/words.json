@@ -1,32 +1,59 @@
 {
+    
+    "тот": {
+        "phon": "tot",
+        "en": "that",
+        "audio": "/audios/1/тот.ogg"
+    },
+    "кот": {
+        "phon": "kot",
+        "en": "cat",
+        "audio": "/audios/1/кот.ogg"
+    },
+    "так": {
+        "phon": "tak",
+        "en": "so",
+        "audio": "/audios/1/так.ogg"
+    },
+    "там": {
+        "phon": "tam",
+        "en": "there",
+        "audio": "/audios/1/там.ogg"
+    },
+    "кто-то": {
+        "phon": "któ-ta",
+        "en": "someone",
+        "note": "(second о pronounced [a] because it is unstressed). This word has the same rhythm as English 'totter' which is stressed on the o.",
+        "audio": "/audios/1/кто-то.ogg"
+    },
     "нет": {
+        "phon": "nyet",
         "en": "no",
-        "audio": "/audios/1/нет.ogg",
-        "phon": "nyet"
+        "audio": "/audios/1/нет.ogg"
     },
     "Москва": {
+        "phon": "mask-va",
         "en": "Moscow",
-        "audio": "/audios/1/Москва.ogg",
-        "phon": "mask-va"
+        "audio": "/audios/1/москва.ogg"
     },
     "метро": {
+        "phon": "mye-tro",
         "en": "metro, underground railway",
-        "audio": "/audios/1/метро.ogg",
-        "phon": "mye-tro"
+        "audio": "/audios/1/метро.ogg"
     },
     "он": {
+        "phon": "on",
         "en": "he",
-        "audio": "/audios/1/он.ogg",
-        "phon": "on"
+        "audio": "/audios/1/он.ogg"
     },
     "она": {
+        "phon": "a-na",
         "en": "she",
-        "audio": "/audios/1/она.ogg",
-        "phon": "a-na"
+        "audio": "/audios/1/она.ogg"
     },
     "сестра": {
+        "phon": "sye-stra",
         "en": "sister",
-        "audio": "/audios/1/сестра.ogg",
-        "phon": "sye-stra"
+        "audio": "/audios/1/сестра.ogg"
     }
 }
