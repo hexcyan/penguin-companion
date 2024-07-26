@@ -55,5 +55,50 @@
         "phon": "sye-stra",
         "en": "sister",
         "audio": "/audios/1/сестра.ogg"
+    },
+    "ресторан": {
+        "phon": "restoran",
+        "en": "sister",
+        "audio": "/audios/1/ресторан.ogg"
+    },
+    "сахар": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/сахар.ogg"
+    },
+    "вам": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/вам.ogg"
+    },
+    "Вера": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/Вера.ogg"
+    },
+    "утро": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/утро.ogg"
+    },
+    "Нева": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/Нева.ogg"
+    },
+    "касса": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/касса.ogg"
+    },
+    "карта": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/карта.ogg"
+    },
+    "марка": {
+        "phon": "",
+        "en": "",
+        "audio": "/audios/1/марка.ogg"
     }
 }

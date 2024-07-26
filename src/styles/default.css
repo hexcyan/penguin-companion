@@ -104,7 +104,7 @@ aside > footer {
     width: calc(100% - 400px);
     padding: 10px 64px;
     background: var(--light-100);
-    box-shadow: 0 2px 10px rgba(181, 115, 49, 0.205); 
+    box-shadow: 0 2px 8px rgba(181, 115, 49, 0.18); 
     z-index: 10;
 
     div {
@@ -154,9 +154,10 @@ body {
 .content-box > article {
     max-width: 38em;
     padding: 0 64px;
+    min-height: 100vh;
     height: fit-content;
     font-family: "Lora", serif;
-    margin: 64px auto;
+    margin: 96px auto;
     position: relative;
 
     header {
@@ -244,4 +245,36 @@ table {
 
 th, td {
     padding: 0 16px;
+}
+
+
+details {
+    margin: 0;
+    padding: 0;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5em 1em; 
+    border: 1px solid #ccc;
+    background: var(--light-100);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 0.5em;
+    font-size: 1.2em;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
 }
