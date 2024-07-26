@@ -1,11 +1,15 @@
 ---
 interface Props {
     title: string;
+    ruTitle: string;
 }
 
-const { title } = Astro.props
+const { title, ruTitle } = Astro.props
 ---
 
-<div class="titlebar">
-    <h3>{title}</h3>
+<div class="titlebar" id="titlebar">
+    <div>
+        <h3>{ruTitle}</h3>
+        <h3>{title}</h3>
+    </div>
 </div>
