@@ -3,26 +3,26 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Tag from "../../components/Tag.astro";
 
-const posts = (await getCollection('devlog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+const posts = (await getCollection("devlog")).sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
 <Layout title="Devlog">
-{
-    posts.map((post) => (
-        <a href={`/devlog/${post.slug}/`}>
-        <div class="blog-post">
-            <h4 class="title">{post.data.title}</h4>
-            {/* <p class="date">{post.data.pubDate}</p> */}
-            <p>{post.data.description}</p>
-            {
-                post.data.tags.map((tag: string) => (
-                    <Tag tag={tag}/>
-                ))
-            }
-        </div>
-        </a>
-    ))
-}
+    {
+        posts.map((post) => (
+            <a href={`/devlog/${post.slug}/`}>
+                <div class="blog-post">
+                    <h4 class="title">{post.data.title}</h4>
+                    <p class="date">
+                        {Intl.DateTimeFormat("en-GB").format(post.data.pubDate)}
+                    </p>
+                    <p>{post.data.description}</p>
+                    {post.data.tags.map((tag: string) => (
+                        <Tag tag={tag} />
+                    ))}
+                </div>
+            </a>
+        ))
+    }
 </Layout>

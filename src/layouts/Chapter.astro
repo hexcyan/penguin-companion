@@ -1,19 +1,15 @@
 ---
 import Sidebar from "../components/Sidebar.astro";
 import Titlebar from "../components/Titlebar.astro";
-import Tag from "../components/Tag.astro";
 import "../styles/default.css";
 
 interface Props {
     title: string;
+    ruTitle: string;
     description: string;
-    pubDate: Date;
-    // updatedDate?: Date;
-    tags: string[];
 }
 
-const { title, description, pubDate, tags } = Astro.props;
-const formattedDate = new Intl.DateTimeFormat("en-GB").format(pubDate);
+const { title, ruTitle, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,12 +26,12 @@ const formattedDate = new Intl.DateTimeFormat("en-GB").format(pubDate);
     <body>
         <Sidebar />
         <div class="content-box">
-            <Titlebar title={title} ruTitle="Devlog" />
+            <Titlebar title={title} ruTitle={ruTitle} />
             <article>
                 <header>
+                    <h2>{ruTitle}</h2>
+                    <hr />
                     <h2>{title}</h2>
-                    <h4>{formattedDate}</h4>
-                    {tags.map((tag: string) => <Tag tag={tag} />)}
                 </header>
 
                 <slot />

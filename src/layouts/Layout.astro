@@ -1,10 +1,9 @@
 ---
-import Sidebar from '../components/Sidebar.astro';
-import Titlebar from '../components/Titlebar.astro';
-import '../styles/default.css'
+import Sidebar from "../components/Sidebar.astro";
+import "../styles/default.css";
 
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -12,23 +11,21 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-    
-	<body>
-        <Sidebar />
-        <div class="content-box">
-            <!-- <Titlebar title={title} /> -->
-            <article>
-                <slot/>
-            </article>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
 
+    <body>
+        <Sidebar />
+        <div class="center content-box">
+            <article>
+                <slot />
+            </article>
         </div>
-	</body>
+    </body>
 </html>

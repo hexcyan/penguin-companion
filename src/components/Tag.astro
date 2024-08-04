@@ -1,11 +1,24 @@
 ---
+import type { Color } from "../consts";
+
+type colorMap = {
+    [key: string]: Color;
+};
+
+const colorMappings = {
+    progress: "#c1ff87",
+} as colorMap;
+
 interface Props {
     tag: string;
 }
 
 const { tag } = Astro.props;
+const bgColor = colorMappings[tag] || "#ffaf65";
 ---
 
-<span class="tag">
+<!-- <a href=`/devlog/tags/${tag}`> -->
+<span class="tag" style=`background: ${bgColor};`>
     {tag}
 </span>
+<!-- </a> -->

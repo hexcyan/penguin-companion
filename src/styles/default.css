@@ -2,6 +2,7 @@
     --primary: #f86233;
     --primary-100: #fb7b44;
     --primary-200: #ffa665;
+    --shadow: #ffd0008f;
     --light-100: #fff0d9;
     --light: #fcf4e8;
     --dark: #25171a;
@@ -96,7 +97,6 @@ aside > footer {
     font-size: 0.8em;
 }
 
-
 .titlebar {
     position: fixed;
     display: flex;
@@ -104,7 +104,7 @@ aside > footer {
     width: calc(100% - 400px);
     padding: 10px 64px;
     background: var(--light-100);
-    box-shadow: 0 2px 8px rgba(181, 115, 49, 0.18); 
+    box-shadow: 0 2px 8px rgba(181, 115, 49, 0.18);
     z-index: 10;
 
     div {
@@ -125,6 +125,7 @@ aside > footer {
     flex-direction: row;
     align-items: baseline;
     font-size: 0.8em;
+    transition: background-color 0.25s ease-in-out;
 }
 
 .chapter:hover {
@@ -144,21 +145,19 @@ body {
 
 .content-box {
     width: 100%;
-    overflow-y: scroll;
-    max-height: calc(100vh);
-    align-self: center;
+    height: 100vh;
+    max-height: 100vh;
     position: relative;
-    text-align:justify
+    overflow-y: scroll;
+    text-align: justify;
 }
 
 .content-box > article {
     max-width: 38em;
     padding: 0 64px;
-    min-height: 100vh;
     height: fit-content;
     font-family: "Lora", serif;
     margin: 96px auto;
-    position: relative;
 
     header {
         text-align: center;
@@ -169,7 +168,19 @@ body {
         width: 30%;
     }
 }
+.center {
+    overflow: hidden !important;
+}
 
+.center > article {
+    width: calc(100% - 128px);
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    min-height: auto;
+}
 
 /* About */
 .about-card {
@@ -213,16 +224,45 @@ body {
 /* Blog */
 .blog-post {
     border: var(--primary) dotted 2px;
-    padding: 8px;
+    padding: 16px 20px;
     width: inherit;
-    margin: 12px;
+    margin: 16px auto;
+    background-color: #ffffffcc;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.blog-post:hover {
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.blog-post .title {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.blog-post .date {
+    font-size: 0.9em;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.blog-post p {
+    margin: 8px 0;
 }
 
 .tag {
-    background: #f86233;
+    display: inline-block;
     padding: 4px 8px;
     text-align: center;
-    margin-right: 4px;
+    margin: 4px 4px 4px 0; /* Space between tags */
+    background-color: var(
+        --tag-bg,
+        #e0e0e0
+    ); /* Default background color if no color is provided */
+    color: #000000; /* Default text color */
+    border-radius: 4px; /* Rounded corners for tags */
+    font-size: 0.85em; /* Slightly smaller font size for tags */
 }
 
 span.word {
@@ -230,23 +270,23 @@ span.word {
     align-items: center;
     line-height: 1.5;
     padding: 4px;
-    align-items:center;
+    align-items: center;
     cursor: pointer;
 }
 
 span.word > img {
     height: 1em;
-    margin-right: 8px
+    margin-right: 8px;
 }
 
 table {
     margin: 0 auto;
 }
 
-th, td {
+th,
+td {
     padding: 0 16px;
 }
-
 
 details {
     margin: 0;
@@ -257,7 +297,7 @@ summary {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 0.5em 1em; 
+    padding: 0.5em 1em;
     border: 1px solid #ccc;
     background: var(--light-100);
 }
