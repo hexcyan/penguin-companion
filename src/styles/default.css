@@ -188,7 +188,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 12px;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
 
 /* Profile */
@@ -229,15 +229,12 @@ body {
     color: #666666;
 }
 
-
-
-
 /* Support */
 .button {
     display: flex;
     height: 32px;
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     width: fit-content;
     align-items: center;
     gap: 8px;
@@ -260,7 +257,9 @@ body {
     margin: 16px auto;
     background-color: #ffffffcc;
     border-radius: 4px;
-    transition: box-shadow 0.3s ease-in-out, transform 0.1s ease-in-out;
+    transition:
+        box-shadow 0.3s ease-in-out,
+        transform 0.1s ease-in-out;
 }
 .blog-post:hover {
     box-shadow: 0 4px 8px var(--shadow);
@@ -287,14 +286,9 @@ body {
     display: inline-block;
     padding: 4px 8px;
     text-align: center;
-    margin: 4px 4px 4px 0; /* Space between tags */
-    background-color: var(
-        --tag-bg,
-        #e0e0e0
-    ); /* Default background color if no color is provided */
-    color: #000000; /* Default text color */
-    border-radius: 4px; /* Rounded corners for tags */
-    font-size: 0.85em; /* Slightly smaller font size for tags */
+    background-color: var(--tag-bg);
+    border-radius: var(--border-radius);
+    font-size: 0.85em;
 }
 
 span.word {
@@ -350,5 +344,3 @@ summary::before {
 details[open] summary::before {
     transform: rotate(90deg);
 }
-
-
