@@ -1,23 +1,27 @@
 ---
 import Profile from "../components/Profile.astro";
+import Support from "../components/Support/Support.astro";
 import Layout from "../layouts/Layout.astro";
 
 ---
 
 <Layout title="About">
     <main>
+        <h2>About</h2>
         <div class="about-card">
-            <Profile image="./audio.png" name="██████" color="#00FFFF">
+            <Profile image="./audio.png" name="██████" color="#9326ff">
                 native russian speaker</br>
                 the voice of the site
             </Profile>
-            <Profile image="./dev.png" name="███████" color="#FFF000">
-                learning russian</br>
+            <Profile image="./dev.png" name="███████" color="#00FFFF">
+                learning russian on/off</br>
                 making websites for fun :D
             </Profile>
         </div>
         
-        This is a passion project. If you are interested in supporting us, please consider donating to help cover hosting fees :)
-        <!-- Support Us -->
+        <p>
+            This is a passion project. If you are interested in supporting us, please consider donating to help cover hosting fees :)
+        </p>
+        <Support />
     </main>
 </Layout>
