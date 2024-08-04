@@ -10,22 +10,10 @@ interface Props {
 const { image, name, color } = Astro.props;
 ---
 
-<div class="profile">
+<div class="profile" style=`border-color:${color};`>
     <img src={image}>
-    <div>
+    <div class="profile-content">
         <h4>{name}</h4>
         <slot />
     </div>
 </div>
-
-<style>
-    .profile {
-        display: flex;
-        flex-grow: 1;
-        background-color: {color};
-    }
-
-    .profile > div {
-        padding: 24px;
-    }
-</style>

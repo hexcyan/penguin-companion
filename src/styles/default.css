@@ -6,6 +6,7 @@
     --light-100: #fff0d9;
     --light: #fcf4e8;
     --dark: #25171a;
+    --border-radius: 4px;
 }
 
 /* josefin-sans-regular */
@@ -187,19 +188,49 @@ body {
     display: flex;
     flex-direction: row;
     gap: 12px;
+    margin-bottom: 20px;;
 }
 
+/* Profile */
 .profile {
-    background-color: #e83126;
+    border: var(--primary) dotted 2px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    background: #ffffff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
 }
 
-.profile > h4 {
+.profile img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-right: 8px;
+    pointer-events: none;
+}
+
+.profile-content {
+    align-content: center;
+    padding: 12px;
+    text-align: left;
+    font-size: small;
+}
+
+.profile h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    color: #333333;
     letter-spacing: 0.1rem;
 }
+
+.profile p {
+    margin: 0;
+    color: #666666;
+}
+
+
+
 
 /* Support */
 .button {
@@ -229,10 +260,11 @@ body {
     margin: 16px auto;
     background-color: #ffffffcc;
     border-radius: 4px;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 .blog-post:hover {
     box-shadow: 0 4px 8px var(--shadow);
+    transform: scale(1.002);
 }
 
 .blog-post .title {
@@ -318,3 +350,5 @@ summary::before {
 details[open] summary::before {
     transform: rotate(90deg);
 }
+
+
