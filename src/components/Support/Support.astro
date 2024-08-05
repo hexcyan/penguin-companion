@@ -1,9 +1,22 @@
----
-import Button from "./Button.astro";
-
----
-
-<div class="support">
-    <Button icons={["pp"]} title="PayPal" color="#CDE8F0" />
-    <Button icons={["btc", "eth"]} title="Crypto" color="#F1D1A1" />
+<div class="donations">
+    <button class="dbtn donation-button paypal">
+        <img src="/pp.svg" alt="PayPal">
+        <span>Donate with PayPal</span>
+    </button>
+    <div class="dbtn dropdown">
+        <button class="donation-button crypto">
+            <span>Donate Crypto</span>
+        </button>
+        <div class="dropdown-content">
+            <!-- Add popup div oncopy -->
+            <button class="donation-button bitcoin" onclick="navigator.clipboard.writeText('btc address')">
+                <img src="/btc.svg" alt="Bitcoin">
+                <span>Donate Bitcoin</span>
+            </button>
+            <button class="donation-button ethereum" onclick="navigator.clipboard.writeText('eth address')">
+                <img src="/eth.svg" alt="Ethereum">
+                <span>Donate Ethereum</span>
+            </button>
+        </div>
+    </div> 
 </div>

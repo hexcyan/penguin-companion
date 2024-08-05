@@ -7,6 +7,9 @@
     --light: #fcf4e8;
     --dark: #25171a;
     --border-radius: 4px;
+    --box-shadow-0: 0 2px 8px rgba(181, 115, 49, 0.18);
+    --box-shadow-1: 0 4px 8px var(--shadow);
+    --box-shadow-ease: 0 4px 8px var(--shadow);
 }
 
 /* josefin-sans-regular */
@@ -105,7 +108,7 @@ aside > footer {
     width: calc(100% - 400px);
     padding: 10px 64px;
     background: var(--light-100);
-    box-shadow: 0 2px 8px rgba(181, 115, 49, 0.18);
+    box-shadow: var(--box-shadow);
     z-index: 10;
 
     div {
@@ -159,7 +162,7 @@ body {
     height: fit-content;
     font-family: "Lora", serif;
     margin: 96px auto;
-
+    padding-bottom: 48px;
     header {
         text-align: center;
         margin-bottom: 36px;
@@ -258,11 +261,11 @@ body {
     background-color: #ffffffcc;
     border-radius: 4px;
     transition:
-        box-shadow 0.3s ease-in-out,
+        var(--box-shadow-ease),
         transform 0.1s ease-in-out;
 }
 .blog-post:hover {
-    box-shadow: 0 4px 8px var(--shadow);
+    box-shadow: var(--box-shadow-1);
     transform: scale(1.002);
 }
 
@@ -343,4 +346,89 @@ summary::before {
 
 details[open] summary::before {
     transform: rotate(90deg);
+}
+
+
+.donations {
+    display: flex;
+    justify-content:space-between;
+    gap: 16px;
+    margin: 24px 0;
+    height: 48px;
+}
+
+.dbtn {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.donation-button {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.donation-button img {
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+    fill: rgb(229, 223, 223);
+}
+
+.dropdown-content {
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.donation-button.dropdown {
+    padding: 0;
+    width: 100%;
+}
+
+.donation-button.crypto {
+    background-color: #242424; 
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Button colors */
+.donation-button.paypal {
+    background-color: #009cde; /* PayPal blue */
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donation-button.bitcoin {
+    background-color: #f7931a; /* Bitcoin orange */
+    color: #814700;
+}
+
+.donation-button.ethereum {
+    background-color: #64608f;
+    color: #ffffff;
+}
+
+.donation-button.paypal:hover {
+    box-shadow: 0px 4px 8px #86fbffb9; /* Deeper shadow on hover */
+    background-color: #0c86d7; /* Darker PayPal blue on hover */
+}
+
+.donation-button.bitcoin:hover {
+    background-color: #f68132;
+
+}
+
+.donation-button.ethereum:hover {
+    background-color: #5d478c; /* Darker Ethereum grey on hover */
 }

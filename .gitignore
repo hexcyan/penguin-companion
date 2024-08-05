@@ -23,5 +23,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-public/
+# public/
 penguin-companion.code-workspace
+.gitignore
+public/
