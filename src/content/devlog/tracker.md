@@ -22,7 +22,7 @@ tags: ["progress"]
     -   [ ] Outline
 -   [x] About Layout
     -   [x] Profile Cards
-    -   [ ] Support Buttons
+    -   [x] Support Buttons
 -   [x] 404 Page
 -   [x] Dark Mode
 

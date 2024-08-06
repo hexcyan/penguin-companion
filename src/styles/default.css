@@ -246,32 +246,11 @@ body {
     margin: 0 0 8px 0;
     font-size: 1.2em;
     color: #333333;
-    /* letter-spacing: 0.1rem; */
 }
 
 .profile p {
     margin: 0;
     color: #666666;
-}
-
-/* Support */
-.button {
-    display: flex;
-    height: 32px;
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
-    width: fit-content;
-    align-items: center;
-    gap: 8px;
-}
-
-.button > img {
-    height: 80%;
-}
-
-.support {
-    display: flex;
-    gap: 4px;
 }
 
 /* Blog */
@@ -282,13 +261,10 @@ body {
     margin: 16px auto;
     background-color: #ffffffcc;
     border-radius: 4px;
-    transition:
-        var(--box-shadow-ease),
-        transform 0.1s ease-in-out;
+    transition:shadow 0.2s ease-in-out,
 }
 .blog-post:hover {
     box-shadow: var(--box-shadow-1);
-    transform: scale(1.002);
 }
 
 .blog-post .title {
@@ -397,7 +373,7 @@ details[open] summary::before {
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease; /* Smooth transitions */
 }
 
 .donation-button img {
@@ -424,18 +400,18 @@ details[open] summary::before {
 }
 
 .dropdown-content > .donation-button {
-    padding-top: 15px;
-    margin-top: -5px;
+    padding: 32px 10px 14px 20px;
+    margin-top: -18px;
+    border-radius: 12px;
     position:relative;
-    box-shadow: 0px 4px 8px #583e1d52;
+    box-shadow: 0px 4px 8px #4330176b;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .donation-button.crypto{
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 4px 6px #6c462480;
 }
 
 /* Button colors */
