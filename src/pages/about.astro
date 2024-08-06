@@ -9,14 +9,31 @@ import Layout from "../layouts/Layout.astro";
     <main>
         <h2>About</h2>
         <div class="about-card">
-            <Profile image="./audio.png" name="██████" color="#FF0000">
-                native russian speaker</br>
-                the voice of the site
+            <Profile image="./audio.png" name="Alexey" color="#FF0000">
+                <p>native russian speaker</p>
+                <p>the voice of the site</p>
             </Profile>
-            <Profile image="./dev.png" name="███████" color="#00FFFF">
-                learning russian on/off</br>
-                making websites for fun :D
+            <Profile image="./dev.png" name="hexcyan" color="#00FFFF">
+                <p>learning russian on/off</p>
+                <p>making websites for fun :D</p>
             </Profile>
+            <div 
+                class="profile contribute" 
+                onclick="window.open('https://github.com/hexcyan/penguin-companion', '_blank')"
+            >
+                <div class="profile-content">
+                    <h4>Want to contribute?</h4>
+                    <p>
+                        Found a bug or have feedback/ideas? This site is open source!
+                    </p>
+                    <p>Open an issue on GitHub or submit a pull request!</p>
+                </div>
+                <img 
+                    class="arrow-icon"
+                    src="/rarrow.svg"
+                    alt="Right Arrow Icon"
+                    >
+            </div>
         </div>
         
         <p>

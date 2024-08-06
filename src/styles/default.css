@@ -188,8 +188,8 @@ body {
 
 /* About */
 .about-card {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 12px;
     margin-bottom: 20px;
 }
@@ -202,6 +202,28 @@ body {
     background: #ffffff;
     border-radius: var(--border-radius);
     overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.contribute {
+    border-color:purple;
+    grid-column:span 2;
+    cursor:pointer;
+    box-shadow:0 0px 4px #6a00ff4b;
+}
+
+.contribute:hover {
+    box-shadow: 0 0 8px #9000ff5f;
+}
+
+.arrow-icon {
+    /* width: 50% !important; */
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 18px !important;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(9%) saturate(1290%) hue-rotate(224deg) brightness(91%) contrast(84%);
 }
 
 .profile img {
@@ -224,7 +246,7 @@ body {
     margin: 0 0 8px 0;
     font-size: 1.2em;
     color: #333333;
-    letter-spacing: 0.1rem;
+    /* letter-spacing: 0.1rem; */
 }
 
 .profile p {
@@ -387,7 +409,6 @@ details[open] summary::before {
 
 .dropdown-content {
     display: none;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
 }
 .donation-button.dropdown {
@@ -403,12 +424,10 @@ details[open] summary::before {
 }
 
 .dropdown-content > .donation-button {
-    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
     padding-top: 15px;
     margin-top: -5px;
     position:relative;
     box-shadow: 0px 4px 8px #583e1d52;
-
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -427,7 +446,7 @@ details[open] summary::before {
 
 .donation-button.bitcoin {
     background-color: #f7931a;
-    color: #814700;
+    color: #543004;
 }
 
 .donation-button.ethereum {
