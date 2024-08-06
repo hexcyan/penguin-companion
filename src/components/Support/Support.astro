@@ -20,3 +20,15 @@
         </div>
     </div> 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        if (dropdownContent) {
+            const buttons = dropdownContent.querySelectorAll('.donation-button');
+            buttons.forEach((button, index) => {
+                (button as HTMLElement).style.zIndex = (100 - index).toString(); // Assign z-index, decreasing for each button
+            });
+        }
+    });
+</script>

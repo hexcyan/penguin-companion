@@ -348,7 +348,7 @@ details[open] summary::before {
     transform: rotate(90deg);
 }
 
-
+/* NEED TO CLEAN LATER RLY MESSY */
 .donations {
     display: flex;
     justify-content:space-between;
@@ -387,7 +387,7 @@ details[open] summary::before {
 
 .dropdown-content {
     display: none;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
 }
 .donation-button.dropdown {
@@ -398,19 +398,35 @@ details[open] summary::before {
 .donation-button.crypto {
     background-color: #242424; 
     color: #ffffff;
+    position:relative;
+    z-index: 10;
+}
+
+.dropdown-content > .donation-button {
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+    padding-top: 15px;
+    margin-top: -5px;
+    position:relative;
+    box-shadow: 0px 4px 8px #583e1d52;
+
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .donation-button.crypto{
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
 
 /* Button colors */
 .donation-button.paypal {
-    background-color: #009cde; /* PayPal blue */
+    background-color: #009cde;
     color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .donation-button.bitcoin {
-    background-color: #f7931a; /* Bitcoin orange */
+    background-color: #f7931a;
     color: #814700;
 }
 
@@ -419,9 +435,18 @@ details[open] summary::before {
     color: #ffffff;
 }
 
+/* Button Hover Effects */
+.donation-button:hover {
+    box-shadow: 0px 4px 8px #302312af;
+}
+.donation-button.crypto:hover {
+    background-color: #242424; 
+    color: #ffffff;
+}
+
 .donation-button.paypal:hover {
-    box-shadow: 0px 4px 8px #86fbffb9; /* Deeper shadow on hover */
-    background-color: #0c86d7; /* Darker PayPal blue on hover */
+    box-shadow: 0px 4px 8px #86fbffb9;
+    background-color: #0c86d7;
 }
 
 .donation-button.bitcoin:hover {
@@ -430,5 +455,6 @@ details[open] summary::before {
 }
 
 .donation-button.ethereum:hover {
-    background-color: #5d478c; /* Darker Ethereum grey on hover */
+    background-color: #5d478c;
 }
+
