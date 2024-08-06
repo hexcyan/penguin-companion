@@ -7,7 +7,7 @@
     --light: #fcf4e8;
     --dark: #25171a;
     --border-radius: 4px;
-    --box-shadow-0: 0 2px 8px rgba(181, 115, 49, 0.18);
+    --box-shadow-0: 0 2px 6px rgba(181, 115, 49, 0.18);
     --box-shadow-1: 0 4px 8px var(--shadow);
     --box-shadow-ease: 0 4px 8px var(--shadow);
 }
@@ -108,7 +108,7 @@ aside > footer {
     width: calc(100% - 400px);
     padding: 10px 64px;
     background: var(--light-100);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-0);
     z-index: 10;
 
     div {
@@ -261,7 +261,7 @@ body {
     margin: 16px auto;
     background-color: #ffffffcc;
     border-radius: 4px;
-    transition:shadow 0.2s ease-in-out,
+    transition: box-shadow 0.2s ease-in-out;
 }
 .blog-post:hover {
     box-shadow: var(--box-shadow-1);
