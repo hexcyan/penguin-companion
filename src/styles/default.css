@@ -384,7 +384,10 @@ details[open] summary::before {
 }
 
 .dropdown-content {
-    display: none;
+    transform: translateY(-25%);
+    transition: transform 0.2s ease;
+    /* display: none; */
+    visibility: hidden;
     z-index: 1;
 }
 .donation-button.dropdown {
@@ -403,11 +406,14 @@ details[open] summary::before {
     padding: 32px 10px 14px 20px;
     margin-top: -18px;
     border-radius: 12px;
-    position:relative;
+    position: relative;
     box-shadow: 0px 4px 8px #4330176b;
 }
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    transform: none;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .donation-button.crypto{
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     z-index: 1000;
