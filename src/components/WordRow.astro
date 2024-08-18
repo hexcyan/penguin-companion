@@ -1,6 +1,6 @@
 ---
-import wordsJson from './words.json';
-import WordSpan from './WordSpan.astro';
+import wordsJson from "./words.json";
+import WordSpan from "./WordSpan.astro";
 interface Word {
     en: string;
     phon?: string;
@@ -16,7 +16,7 @@ type mapType = {
 const words = wordsJson as mapType;
 
 interface Props {
-  word: string;
+    word: string;
 }
 
 const { word } = Astro.props;
@@ -25,15 +25,16 @@ const wordData: Word | undefined = words[word];
 
 <tr class="wordRow">
     <td>
-        <WordSpan word={word}/>
+        <WordSpan word={word} wordAudio={wordData?.audio} />
     </td>
     {
         wordData ? (
-            Object.entries(wordData).map(([key, value]) => (
-                key !== "audio" && key !== "note" && (
-                    key === "phon" ? <td>[{value}]</td> : <td>{value}</td>
-                )
-            ))
+            Object.entries(wordData).map(
+                ([key, value]) =>
+                    key !== "audio" &&
+                    key !== "note" &&
+                    (key === "phon" ? <td>[{value}]</td> : <td>{value}</td>)
+            )
         ) : (
             <p style="color:red">{word} not found.</p>
         )

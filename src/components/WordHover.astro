@@ -1,0 +1,8 @@
+---
+const { word, hoverText } = Astro.props;
+---
+
+<span class="tooltip-container" tabindex="0">
+    <Fragment class="tooltip-trigger" set:html={word} />
+    <div class="toolTip" set:html={hoverText} />
+</span>

@@ -1,30 +1,12 @@
 ---
-import wordsJson from "./words.json";
-interface Word {
-    en: string;
-    audio: string;
-    phon?: string;
-    stress?: string;
-    note?: string;
-}
-
-type mapType = {
-    [key: string]: Word;
-};
-
-const words = wordsJson as mapType;
-
-interface Props {
-    word: string;
-}
-
-const { word } = Astro.props;
-const wordData: Word | undefined = words[word];
+const { word, wordAudio } = Astro.props;
 ---
 
-<word-span data-word={JSON.stringify(wordData)}>
-    <span class="word"> <img src={`/speaker.svg`} /></span>
-    {word}
+<word-span data-word={wordAudio}>
+    <span class="word">
+        {wordAudio && <img src={`/speaker.svg`} alt="speaker icon" />}
+        {word}
+    </span>
 </word-span>
 
 <script>
@@ -35,19 +17,15 @@ const wordData: Word | undefined = words[word];
 
         connectedCallback() {
             const wordSpans = this.querySelectorAll("span.word");
-            const wordDataString = this.dataset.word;
-            const wordData = wordDataString ? JSON.parse(wordDataString) : null;
+            const wordAudio = this.dataset.word;
 
-            if (wordData && wordSpans) {
+            if (wordAudio && wordSpans) {
                 wordSpans.forEach((wordSpan) => {
                     wordSpan.addEventListener("click", () => {
-                        if (wordData.audio) {
-                            const audio = new Audio(wordData.audio);
-                            audio.play();
-                        }
+                        const audio = new Audio(wordAudio);
+                        audio.play();
                     });
                 });
-                console.log(wordData);
             }
         }
     }

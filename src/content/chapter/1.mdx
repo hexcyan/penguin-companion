@@ -6,6 +6,7 @@ description: "Alphabet and Pronounciation; Transliteraion; Street Signs"
 
 import WordSpan from "../../components/WordSpan.astro";
 import WordRow from "../../components/WordRow.astro";
+import WordHover from "../../components/WordHover.astro";
 
 <details open>
 <summary>
@@ -16,7 +17,7 @@ Before you finish this lesson you’ll be able to pronounce the Russian heading 
 
 ### 1.1 The Russian Cyrillic Alphabet
 
-Russian Cyrillic is based on an alphabet invented around ad 863 by a Macedonian monk, who spoke a South Slavonic language closely related to Russian and also knew Greek; the inventor was later canonized as Saint Cyril, hence the name Cyrillic. This original Slavonic alphabet was based on the Greek one, so some of the letters will be familiar, e.g. **п**, the Russian p, which you may recognize as the Greek *pi*, used in mathematics.
+Russian Cyrillic is based on an alphabet invented around ad 863 by a Macedonian monk, who spoke a South Slavonic language closely related to Russian and also knew Greek; the inventor was later canonized as Saint Cyril, hence the name Cyrillic. This original Slavonic alphabet was based on the Greek one, so some of the letters will be familiar, e.g. **п**, the Russian p, which you may recognize as the Greek _pi_, used in mathematics.
 
 The alphabet is the first hurdle when you tackle Russian, but it is not a daunting one. Once you know the sounds of the thirty-three letters, you can read Russian words comprehensibly; unlike English, it is generally true to say that Russian words are pronounced as they are written. In this lesson, you will learn the essentials for reading and pronouncing Russian. In Lesson 2, you will find details of the regular minor differences between Russian spelling and pronunciation.
 
@@ -26,117 +27,177 @@ To make thirty-three letters easier to learn, we’ll divide them into four grou
 
 (a) The first group contains five letters which are easy to learn:
 
-|  Capital  |  Small  | Pronounciation         |
-| :-------: | :-----: | :--------------------- |
-|     А     |    а    | [a] as in f**a**ther   |
-|     К     |    к    | [k] as in **k**angaroo |
-|     М     |    м    | [m] as in **m**an      |
-|     О     |    о    | [o] as in b**o**ttle*  |
-|     Т     |    т    | [t] as in **t**an      |
+| Capital | Small | Pronounciation         |
+| :-----: | :---: | :--------------------- |
+|    А    |   а   | [a] as in f**a**ther   |
+|    К    |   к   | [k] as in **k**angaroo |
+|    М    |   м   | [m] as in **m**an      |
+|    О    |   о   | <WordHover word="[o] as in b<strong>o</strong>ttle*" hoverText="note that in unstressed syllables (i.e. with no stress mark) standard Moscow pronounciation of <strong>o</strong> is closed to [a]. For 'stress', <a href='/chapter/2'>see 2.2</a>" /> |
+|    Т    |   т   | [t] as in **t**an      |
 
 So you can read Russian words such as:
 
 <table>
-    <WordRow word="тот"/>
-    <WordRow word="кот"/>
-    <WordRow word="так"/>
-    <WordRow word="там"/>
-    <WordRow word="кто-то"/>
+    <WordRow word="тот" />
+    <WordRow word="кот" />
+    <WordRow word="так" />
+    <WordRow word="там" />
+    <WordRow word="кто-то" />
 </table>
 
 (b) The second group contains seven letters which look like English ones but have different sounds:
 
-|  Capital  |  Small  | Pronounciation         |
-| :-------: | :-----: | :--------------------- |
-|     В     |    в    | [v] as in **v**et      |
-|     Е     |    е    | [ye] as in **ye**s     |
-|     Н     |    н    | [n] as in **n**ever    |
-|     Р     |    р    | [r] as in e**rr**or*   |
-|     С     |    с    | [s] as in **s**it      |
-|     У     |    у    | [oo] as in b**oo**t    |
-|     Х     |    х    | [h] like in lo**ch**   |
+| Capital | Small | Pronounciation        |
+| :-----: | :---: | :-------------------- |
+|    В    |   в   | [v] as in **v**et     |
+|    Е    |   е   | [ye] as in **ye**s    |
+|    Н    |   н   | [n] as in **n**ever   |
+|    Р    |   р   | [r] as in e**rr**or\* |
+|    С    |   с   | [s] as in **s**it     |
+|    У    |   у   | [oo] as in b**oo**t   |
+|    Х    |   х   | [h] like in lo**ch**  |
 
 Words for practice:
 
 <table>
-    <WordRow word="нет"/>
-    <WordRow word="метро"/>
-    <WordRow word="он"/>
-    <WordRow word="она"/>
-    <WordRow word="сестра"/>
-    <WordRow word="ресторан"/>
+    <WordRow word="нет" />
+    <WordRow word="метро" />
+    <WordRow word="он" />
+    <WordRow word="она" />
+    <WordRow word="сестра" />
+    <WordRow word="ресторан" />
 </table>
 
 Now try these ones:
 
 <table>
-    <WordRow word="сахар"/>
-    <WordRow word="вам"/>
-    <WordRow word="Вера"/>
-    <WordRow word="утро"/>
-    <WordRow word="Нева"/>
-    <WordRow word="касса"/>
-    <WordRow word="карта"/>
-    <WordRow word="марка"/>
+    <WordRow word="сахар" />
+    <WordRow word="вам" />
+    <WordRow word="Вера" />
+    <WordRow word="утро" />
+    <WordRow word="Нева" />
+    <WordRow word="касса" />
+    <WordRow word="карта" />
+    <WordRow word="марка" />
 </table>
 
 It is worth going through these lists twice, since you will meet all these useful words again.
 
 (c) The third group contains thirteen letters which look unfamiliar but have familiar sounds:
 
-|  Capital  |  Small  | Pronounciation                |
-| :-------: | :-----: | :---------------------------- |
-|     Б     |    б    | [zh] like in plea**s**ure     |
-|     Г     |    г    | [ts]                          |
-|     Д     |    д    |                               |
-|     Е     |    е    |                               |
-|     Ё     |    ё    |                               |
-|     З     |    з    |                               |
-|     И     |    и    |                               |
-|     Й     |    й    |                               |
-|     Л     |    л    |                               |
-|     П     |    п    |                               |
-|     Ф     |    ф    |                               |
-|     Э     |    э    |                               |
-|     Ю     |    ю    |                               |
-|     Я     |    я    |                               |
+| Capital | Small | Pronounciation           |
+| :-----: | :---: | :----------------------- |
+|    Б    |   б   | [b] as in **b**et        |
+|    Г    |   г   | [g] as in **g**et        |
+|    Д    |   д   | [d] as in **d**ebt       |
+|    Ё    |   ё   | [yo] as in **yo**nder    |
+|    З    |   з   | [z] as in **z**oo        |
+|    И    |   и   | [ee] as in **ee**l       |
+|    Й    |   й   | [y] as in bo**y**\*      |
+|    Л    |   л   | [l] as in peop**l**e     |
+|    П    |   п   | [p] as in **p**et        |
+|    Ф    |   ф   | [f] as in **f**at        |
+|    Э    |   э   | [e] as in f**e**d        |
+|    Ю    |   ю   | [yoo] as in **u**niverse |
+|    Я    |   я   | [ya] as in **ya**k       |
 
 Examples:
 
 <table>
-    <WordRow word="мир"/>
+    <WordRow word="мир" />
+    <WordRow word="да" />
+    <WordRow word="футбол" />
+    <WordRow word="спасибо" />
+    <WordRow word="до свидания" />
+    <WordRow word="Югославия" />
+    <WordRow word="Александр" />
+    <WordRow word="спутник" />
+    <WordRow word="Владивосток" />
+    <WordRow word="Россия" />
+    <WordRow word="Толстой" />
+    <WordRow word="зима" />
+    <WordRow word="Белфаст" />
+    <WordRow word="я знаю" />
+    <WordRow word="Аерофлот" />
+    <WordRow word="ликёр" />
+    <WordRow word="самолет" />
+    <WordRow word="бойкот" />
+    <WordRow word="парк" />
+    <WordRow word="киоск" />
+    <WordRow word="Байкал" />
+    <WordRow word="телефон" />
+    <WordRow word="Правда" />
 </table>
 
 (d) The last group contains eight letters which take longer to learn:
 
-|  Capital  |  Small  | Pronounciation                |
-| :-------: | :-----: | :---------------------------- |
-|     Ж     |    ж    | [zh] like in plea**s**ure     |
-|     Ц     |    ц    | [ts]                          |
-|     Ч     |    ч    |                               |
-|     Ш     |    ш    |                               |
-|     Щ     |    щ    |                               |
-|     Ъ     |    ъ    |                               |
-|     Ы     |    ы    |                               |
-|     Ь     |    ь    |                               |
+| Capital | Small | Pronounciation                   |
+| :-----: | :---: | :------------------------------- |
+|    Ж    |   ж   | [zh] like in plea**s**ure        |
+|    Ц    |   ц   | [ts] as in i**ts**               |
+|    Ч    |   ч   | [ch] as in **ch**ur**ch**        |
+|    Ш    |   ш   | [sh] as in **sh**ut              |
+|    Щ    |   щ   | [shsh] as in wel**sh** **sh**eep |
+|    Ъ    |   ъ   | 'hard sign'\*                    |
+|    Ы    |   ы   | [i] as in b**i**t                |
+|    Ь    |   ь   | 'soft sign'\*                    |
 
 Examples:
 
 <table>
-    <WordRow word="журнал"/>
+    <WordRow word="журнал" />
+    <WordRow word="царевич" />
+    <WordRow word="гостиница" />
+    <WordRow word="чай" />
+    <WordRow word="дружба" />
+    <WordRow word="щи" />
+    <WordRow word="борщ" />
+    <WordRow word="шампанское" />
+    <WordRow word="Шотландия" />
+    <WordRow word="Шостакович" />
+    <WordRow word="объект" />
+    <WordRow word="сын" />
+    <WordRow word="рестораны" />
+    <WordRow word="Крым" />
+    <WordRow word="кофе" />
+    <WordRow word="большой" />
+    <WordRow word="Кремль" />
+    <WordRow word="царь" />
 </table>
 
-If you learn the values of the thirty-three letters given above, you will be understood when you read any Russian word. Read them by the syllables', as in the transcriptions above: **[Vla-dee-va-stók]** . A syllable' is a vowel plus any preceding consonants; consonants at the end of a word go with the last vowel; if a word contains a large or awkward group of consonants, split the consonants so that some go with the preceding vowel and some with the following one, e.g. Mockb£ ‘Moscow’ can be read **[Mask-vá]**. While you are learning to read Cyrillic, use that slow pronunciation, syllable by syllable.
+If you learn the values of the thirty-three letters given above, you will be understood when you read any Russian word. Read them by the syllables', as in the transcriptions above: **[Vla-dee-va-stók]** . A syllable' is a vowel plus any preceding consonants; consonants at the end of a word go with the last vowel; if a word contains a large or awkward group of consonants, split the consonants so that some go with the preceding vowel and some with the following one, e.g. **Москва** ‘Moscow’ can be read **[Mask-vá]**. While you are learning to read Cyrillic, use that slow pronunciation, syllable by syllable.
 
 Now try this practice exercise. Cover the transcription (and the translation) on the right.
 
 <table>
-    <WordRow word="Владимир"/>
+    <WordRow word="Владимир" />
+    <WordRow word="туалет" />
+    <WordRow word="метро" />
+    <WordRow word="троллейбус" />
+    <WordRow word="календарь" />
+    <WordRow word="перестройка" />
+    <WordRow word="гласность" />
+    <WordRow word="Украйна" />
+    <WordRow word="Сибирь" />
+    <WordRow word="Манчестер" />
+    <WordRow word="Ливерпуль" />
+    <WordRow word="Абердин" />
+    <WordRow word="Портсмут" />
+    <WordRow word="Филадельфия" />
+    <WordRow word="Майами" />
+    <WordRow word="Голуэй" />
+    <WordRow word="Дублин" />
+    <WordRow word="Мельбурн" />
+    <WordRow word="Перт" />
+    <WordRow word="дача" />
+    <WordRow word="хорошо" />
+    <WordRow word="доброе утро" />
 </table>
 
 ### The Russian Alphabet in Dictionary Order
 
 Here is the Russian (Cyrillic) alphabet in its normal dictionary order. Cover the transcription on the right and check your pronunciation of the thirty-three letters again. To help you learn the order of the letters, notice that it is similar to the Latin alphabet as far as letter no. 21 (**у**), so you should concentrate on the letters from **Ф**.
+
 </details>
 
 <details open>
@@ -166,4 +227,5 @@ Here are some common signs.
 1. [ ]
 
 ### EXERCISE 1/3
+
 </details>
