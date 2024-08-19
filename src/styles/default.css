@@ -373,7 +373,11 @@ details[open] summary::before {
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    transition: 
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.2s ease,
+        visibility 0.1s ease;
 }
 
 .donation-button img {
@@ -384,10 +388,9 @@ details[open] summary::before {
 }
 
 .dropdown-content {
+    visibility: hidden;
     transform: translateY(-25%);
     transition: transform 0.2s ease;
-    /* display: none; */
-    visibility: hidden;
     z-index: 1;
 }
 .donation-button.dropdown {
@@ -403,7 +406,7 @@ details[open] summary::before {
 }
 
 .dropdown-content > .donation-button {
-    padding: 32px 10px 14px 20px;
+    padding: 28px 10px 14px 20px;
     margin-top: -18px;
     border-radius: 12px;
     position: relative;
@@ -431,9 +434,14 @@ details[open] summary::before {
     color: #543004;
 }
 
+.dropdown:hover .donation-button.ethereum {
+    transform: translateY(0%);
+}
+
 .donation-button.ethereum {
     background-color: #64608f;
     color: #ffffff;
+    transform: translateY(-80%);
 }
 
 /* Button Hover Effects */
@@ -481,7 +489,7 @@ details[open] summary::before {
     top: 50%;
     transform: translateY(-10%);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
     white-space: normal;
 }
 
