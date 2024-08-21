@@ -8,6 +8,7 @@ tags: ["progress"]
 
 ## Layouts and Components
 
+-   [ ] Mobile Layout
 -   [ ] Main Layout
     -   [x] Sidebar
     -   [x] Content Box
@@ -19,6 +20,8 @@ tags: ["progress"]
     -   [x] Collapsible Sections
     -   [x] Audio Button
     -   [x] Word Rows
+        -   [ ] Refactor audio to take audio path
+    -   [ ] Hover for note
     -   [ ] Outline
 -   [x] About Layout
     -   [x] Profile Cards

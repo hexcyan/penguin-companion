@@ -27,3 +27,4 @@ pnpm-debug.log*
 penguin-companion.code-workspace
 .gitignore
 public/
+content/

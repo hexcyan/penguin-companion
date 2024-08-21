@@ -1,4 +1,5 @@
 ---
+import WordHover from "./WordHover.astro";
 import wordsJson from "./words.json";
 import WordSpan from "./WordSpan.astro";
 interface Word {
@@ -29,12 +30,28 @@ const wordData: Word | undefined = words[word];
     </td>
     {
         wordData ? (
-            Object.entries(wordData).map(
-                ([key, value]) =>
-                    key !== "audio" &&
-                    key !== "note" &&
-                    (key === "phon" ? <td>[{value}]</td> : <td>{value}</td>)
-            )
+            Object.entries(wordData).map(([key, value]) => {
+                if (key === "audio" || key === "note") {
+                    return null;
+                }
+
+                if (key === "en" && wordData.note) {
+                    return (
+                        <td>
+                            <WordHover
+                                word={`${value}`}
+                                hoverText={wordData.note}
+                            />
+                        </td>
+                    );
+                }
+
+                if (key === "phon") {
+                    return <td>[{value}]</td>;
+                }
+
+                return <td>{value}</td>;
+            })
         ) : (
             <p style="color:red">{word} not found.</p>
         )

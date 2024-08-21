@@ -39,6 +39,15 @@
     src: url("/fonts/Lora-Regular.woff2") format("woff2");
 }
 
+/* lora-400 italic */
+@font-face {
+    font-display: swap;
+    font-family: "Lora";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/fonts/Lora-Italic.woff2") format("woff2");
+}
+
 aside {
     display: flex;
     flex-direction: column;
@@ -477,7 +486,7 @@ details[open] summary::before {
 .toolTip {
     visibility: hidden;
     width: max-content;
-    max-width: 12em;
+    max-width: 12.5em;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -489,8 +498,10 @@ details[open] summary::before {
     top: 50%;
     transform: translateY(-10%);
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, visibility 0.1s ease;
     white-space: normal;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .toolTip a {

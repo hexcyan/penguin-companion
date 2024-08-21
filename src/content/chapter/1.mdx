@@ -7,6 +7,29 @@ description: "Alphabet and Pronounciation; Transliteraion; Street Signs"
 import WordSpan from "../../components/WordSpan.astro";
 import WordRow from "../../components/WordRow.astro";
 import WordHover from "../../components/WordHover.astro";
+export const map1 = {
+    о: {
+        word: "[o] as in b**o**ttle",
+        hover: "note that in unstressed syllables (i.e. with no stress mark) standard Moscow pronounciation of **o** is closed to [a]. For 'stress', <a href='/chapter/2'>see 2.2</a>",
+    },
+    р: {
+        word: "[r] as in e**rr**or",
+        hover: "rolled like in Scottish English",
+    },
+    ё: {
+        word: "[yo] as in **yo**nder",
+        hover: "Russians normally omit the two dots, so in books, newspapers etc. this letter *looks* the same as **e** [ye]; however, the dots are printed in dictionaries and books for foreigners"
+    },
+    ъ: {
+        word: "'hard sign'",
+        hover: "this letter has no sound of its own but represents a very short pause"
+    }, 
+    ь: {
+        word: "'soft sign'",
+        hover: "[y] as in **y**et, but pronounced simultaneously with the letter before it - so **нь** sounds like [ny] in ca**ny**on. Try not to separate the [y] from the preceding letter, particularly at the ends of words; to remid you of this, we shall show the **ь** as a small raised ^y in our transcripts, e.g. **сóль** 'salt' [**sol^y**]"
+    }
+
+};
 
 <details open>
 <summary>
@@ -27,13 +50,13 @@ To make thirty-three letters easier to learn, we’ll divide them into four grou
 
 (a) The first group contains five letters which are easy to learn:
 
-| Capital | Small | Pronounciation         |
-| :-----: | :---: | :--------------------- |
-|    А    |   а   | [a] as in f**a**ther   |
-|    К    |   к   | [k] as in **k**angaroo |
-|    М    |   м   | [m] as in **m**an      |
-|    О    |   о   | <WordHover word="[o] as in b<strong>o</strong>ttle*" hoverText="note that in unstressed syllables (i.e. with no stress mark) standard Moscow pronounciation of <strong>o</strong> is closed to [a]. For 'stress', <a href='/chapter/2'>see 2.2</a>" /> |
-|    Т    |   т   | [t] as in **t**an      |
+| Capital | Small | Pronounciation                                                  |
+| :-----: | :---: | :-------------------------------------------------------------- |
+|    А    |   а   | [a] as in f**a**ther                                            |
+|    К    |   к   | [k] as in **k**angaroo                                          |
+|    М    |   м   | [m] as in **m**an                                               |
+|    О    |   о   | <WordHover word={map1["о"].word} hoverText={map1["о"].hover} /> |
+|    Т    |   т   | [t] as in **t**an                                               |
 
 So you can read Russian words such as:
 
@@ -47,15 +70,15 @@ So you can read Russian words such as:
 
 (b) The second group contains seven letters which look like English ones but have different sounds:
 
-| Capital | Small | Pronounciation        |
-| :-----: | :---: | :-------------------- |
-|    В    |   в   | [v] as in **v**et     |
-|    Е    |   е   | [ye] as in **ye**s    |
-|    Н    |   н   | [n] as in **n**ever   |
-|    Р    |   р   | [r] as in e**rr**or\* |
-|    С    |   с   | [s] as in **s**it     |
-|    У    |   у   | [oo] as in b**oo**t   |
-|    Х    |   х   | [h] like in lo**ch**  |
+| Capital | Small | Pronounciation                                                  |
+| :-----: | :---: | :-------------------------------------------------------------- |
+|    В    |   в   | [v] as in **v**et                                               |
+|    Е    |   е   | [ye] as in **ye**s                                              |
+|    Н    |   н   | [n] as in **n**ever                                             |
+|    Р    |   р   | <WordHover word={map1["р"].word} hoverText={map1["р"].hover} /> |
+|    С    |   с   | [s] as in **s**it                                               |
+|    У    |   у   | [oo] as in b**oo**t                                             |
+|    Х    |   х   | [h] like in lo**ch** or German Ba**ch**                         |
 
 Words for practice:
 
@@ -85,21 +108,21 @@ It is worth going through these lists twice, since you will meet all these usefu
 
 (c) The third group contains thirteen letters which look unfamiliar but have familiar sounds:
 
-| Capital | Small | Pronounciation           |
-| :-----: | :---: | :----------------------- |
-|    Б    |   б   | [b] as in **b**et        |
-|    Г    |   г   | [g] as in **g**et        |
-|    Д    |   д   | [d] as in **d**ebt       |
-|    Ё    |   ё   | [yo] as in **yo**nder    |
-|    З    |   з   | [z] as in **z**oo        |
-|    И    |   и   | [ee] as in **ee**l       |
-|    Й    |   й   | [y] as in bo**y**\*      |
-|    Л    |   л   | [l] as in peop**l**e     |
-|    П    |   п   | [p] as in **p**et        |
-|    Ф    |   ф   | [f] as in **f**at        |
-|    Э    |   э   | [e] as in f**e**d        |
-|    Ю    |   ю   | [yoo] as in **u**niverse |
-|    Я    |   я   | [ya] as in **ya**k       |
+| Capital | Small | Pronounciation                                                  |
+| :-----: | :---: | :-------------------------------------------------------------- |
+|    Б    |   б   | [b] as in **b**et                                               |
+|    Г    |   г   | [g] as in **g**et                                               |
+|    Д    |   д   | [d] as in **d**ebt                                              |
+|    Ё    |   ё   | <WordHover word={map1["ё"].word} hoverText={map1["ё"].hover} /> |
+|    З    |   з   | [z] as in **z**oo                                               |
+|    И    |   и   | [ee] as in **ee**l                                              |
+|    Й    |   й   | [y] as in bo**y**\*                                             |
+|    Л    |   л   | [l] as in peop**l**e                                            |
+|    П    |   п   | [p] as in **p**et                                               |
+|    Ф    |   ф   | [f] as in **f**at                                               |
+|    Э    |   э   | [e] as in f**e**d                                               |
+|    Ю    |   ю   | [yoo] as in **u**niverse                                        |
+|    Я    |   я   | [ya] as in **ya**k                                              |
 
 Examples:
 
@@ -131,16 +154,16 @@ Examples:
 
 (d) The last group contains eight letters which take longer to learn:
 
-| Capital | Small | Pronounciation                   |
-| :-----: | :---: | :------------------------------- |
-|    Ж    |   ж   | [zh] like in plea**s**ure        |
-|    Ц    |   ц   | [ts] as in i**ts**               |
-|    Ч    |   ч   | [ch] as in **ch**ur**ch**        |
-|    Ш    |   ш   | [sh] as in **sh**ut              |
-|    Щ    |   щ   | [shsh] as in wel**sh** **sh**eep |
-|    Ъ    |   ъ   | 'hard sign'\*                    |
-|    Ы    |   ы   | [i] as in b**i**t                |
-|    Ь    |   ь   | 'soft sign'\*                    |
+| Capital | Small | Pronounciation                                                  |
+| :-----: | :---: | :-------------------------------------------------------------- |
+|    Ж    |   ж   | [zh] like in plea**s**ure                                       |
+|    Ц    |   ц   | [ts] as in i**ts**                                              |
+|    Ч    |   ч   | [ch] as in **ch**ur**ch**                                       |
+|    Ш    |   ш   | [sh] as in **sh**ut                                             |
+|    Щ    |   щ   | [shsh] as in wel**sh** **sh**eep                                |
+|    Ъ    |   ъ   | <WordHover word={map1["ъ"].word} hoverText={map1["ъ"].hover} /> |
+|    Ы    |   ы   | [i] as in b**i**t                                               |
+|    Ь    |   ь   | <WordHover word={map1["ь"].word} hoverText={map1["ь"].hover} /> |
 
 Examples:
 
@@ -197,6 +220,10 @@ Now try this practice exercise. Cover the transcription (and the translation) on
 ### The Russian Alphabet in Dictionary Order
 
 Here is the Russian (Cyrillic) alphabet in its normal dictionary order. Cover the transcription on the right and check your pronunciation of the thirty-three letters again. To help you learn the order of the letters, notice that it is similar to the Latin alphabet as far as letter no. 21 (**у**), so you should concentrate on the letters from **Ф**.
+
+#### Russian Italics
+
+NOTE: In Russian italic printing, **г** is _г_, **д** is _д_, **и** is _и_, **й** is _й_, **л** is _л_, **п** is _п_, **т** is _т_. You will see in [Lesson 2](/chapter/2)
 
 </details>
 

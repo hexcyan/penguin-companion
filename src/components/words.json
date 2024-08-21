@@ -1,5 +1,4 @@
 {
-    
     "тот": {
         "phon": "tot",
         "en": "that",
@@ -23,7 +22,7 @@
     "кто-то": {
         "phon": "któ-ta",
         "en": "someone",
-        "note": "(second о pronounced [a] because it is unstressed). This word has the same rhythm as English 'totter' which is stressed on the o.",
+        "note": "(second **о** pronounced [a] because it is unstressed). This word has the same rhythm as English 'totter' which is stressed on the o.",
         "audio": "/audios/1/кто-то.ogg"
     },
     "нет": {
@@ -32,12 +31,12 @@
         "audio": "/audios/1/нет.ogg"
     },
     "Москва": {
-        "phon": "mask-va",
+        "phon": "mask-vá",
         "en": "Moscow",
         "audio": "/audios/1/москва.ogg"
     },
     "метро": {
-        "phon": "mye-tro",
+        "phon": "mye-tró",
         "en": "metro, underground railway",
         "audio": "/audios/1/метро.ogg"
     },
@@ -47,28 +46,28 @@
         "audio": "/audios/1/он.ogg"
     },
     "она": {
-        "phon": "a-na",
+        "phon": "a-ná",
         "en": "she",
         "audio": "/audios/1/она.ogg"
     },
     "сестра": {
-        "phon": "sye-stra",
+        "phon": "sye-strá",
         "en": "sister",
         "audio": "/audios/1/сестра.ogg"
     },
     "ресторан": {
-        "phon": "restoran",
-        "en": "sister",
+        "phon": "rye-sta-rán",
+        "en": "restaurant",
         "audio": "/audios/1/ресторан.ogg"
     },
     "сахар": {
-        "phon": "",
-        "en": "",
+        "phon": "sá-har",
+        "en": "sugar",
         "audio": "/audios/1/сахар.ogg"
     },
     "вам": {
-        "phon": "",
-        "en": "",
+        "phon": "vam",
+        "en": "to you",
         "audio": "/audios/1/вам.ogg"
     },
     "Вера": {
@@ -77,28 +76,53 @@
         "audio": "/audios/1/Вера.ogg"
     },
     "утро": {
-        "phon": "",
-        "en": "",
+        "phon": "oó-tra",
+        "en": "morning",
         "audio": "/audios/1/утро.ogg"
     },
     "Нева": {
-        "phon": "",
-        "en": "",
+        "phon": "nye-vá",
+        "en": "Neva (river in St Petersburg)",
         "audio": "/audios/1/Нева.ogg"
     },
     "касса": {
-        "phon": "",
-        "en": "",
+        "phon": "ká-ssa",
+        "en": "cash desk",
         "audio": "/audios/1/касса.ogg"
     },
     "карта": {
-        "phon": "",
-        "en": "",
+        "phon": "kár-ta",
+        "en": "map",
         "audio": "/audios/1/карта.ogg"
     },
     "марка": {
+        "phon": "már-ka",
+        "en": "postage stamp",
+        "audio": "/audios/1/марка.ogg"
+    },
+    "мир": {
         "phon": "",
         "en": "",
-        "audio": "/audios/1/марка.ogg"
+        "audio": ""
+    },
+    "да": {
+        "phon": "",
+        "en": "",
+        "audio": ""
+    },
+    "футбол": {
+        "phon": "",
+        "en": "",
+        "audio": ""
+    },
+    "спасибо": {
+        "phon": "",
+        "en": "",
+        "audio": ""
+    },
+    "до свидания": {
+        "phon": "",
+        "en": "",
+        "audio": ""
     }
 }
