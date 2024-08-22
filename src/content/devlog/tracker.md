@@ -1,9 +1,9 @@
 ---
-title: "#X - Progress Log"
-description: "Welcome to this website"
+title: "#X - Feature Tracker"
+description: "Check out upcoming features here!"
 pubDate: "Apr 2 2024"
-updatedDate: "Aug 4 2024"
-tags: ["progress"]
+updatedDate: "Aug 22 2024"
+tags: ["progress", "tracker"]
 ---
 
 ## Layouts and Components
@@ -20,9 +20,10 @@ tags: ["progress"]
     -   [x] Collapsible Sections
     -   [x] Audio Button
     -   [x] Word Rows
-        -   [ ] Refactor audio to take audio path
-    -   [ ] Hover for note
+        -   [x] Refactor audio to take audio path
+    -   [x] Hover for note
     -   [ ] Outline
+    -   [ ] Add anchor links
 -   [x] About Layout
     -   [x] Profile Cards
     -   [x] Support Buttons

@@ -6,7 +6,7 @@ const devlog = defineCollection({
         title: z.string(),
         description: z.string(),
         pubDate: z.coerce.date(),
-        // updatedDate: z.coerce.date().optional(),
+        updatedDate: z.coerce.date().optional(),
         tags: z.array(z.string()),
     }),
 });
