@@ -39,6 +39,6 @@ jobs:
                   git ftp push \
                     --user "$FTP_USERNAME" \
                     --passwd "$FTP_PASSWORD" \
-                    --syncroot ./dist \
+                    --syncroot dist \
                     --remote-root "$FTP_REMOTE" \
                     $FTP_SERVER
