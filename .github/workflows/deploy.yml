@@ -25,10 +25,6 @@ jobs:
 
             - name: Build Astro project
               run: npm run build
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        steps:
             - name: List build directory
               run: ls
             - name: Deploy via FTP
@@ -41,6 +37,6 @@ jobs:
                   git ftp push \
                     --user "$FTP_USERNAME" \
                     --passwd "$FTP_PASSWORD" \
-                    --syncroot dist \
+                    --syncroot dist/ \
                     --remote-root "$FTP_REMOTE" \
                     $FTP_SERVER
