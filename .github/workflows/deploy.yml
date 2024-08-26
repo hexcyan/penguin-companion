@@ -35,8 +35,13 @@ jobs:
         needs: build
         runs-on: ubuntu-latest
         steps:
+            - name: Download Artifact
+              uses: actions/download-artifact@master
+              with:
+                  name: penguin-artifact
+                  path: dist
             - name: List build directory
-              run: ls
+              run: ls dist
             - name: Deploy via FTP
               env:
                   FTP_SERVER: ${{ secrets.FTP_SERVER }}
