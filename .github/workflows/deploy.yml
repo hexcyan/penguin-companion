@@ -1,0 +1,43 @@
+name: Deploy Astro Site to cPanel
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Set up env
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y git-ftp
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: "18"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build Astro project
+              run: npm run build
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy via FTP
+              env:
+                  FTP_SERVER: ${{ secrets.FTP_SERVER }}
+                  FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+                  FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+                  FTP_REMOTE: ${{ secrets.FTP_REMOTE }}
+              run: |
+                  git ftp push \
+                    --user "$FTP_USERNAME" \
+                    --passwd "$FTP_PASSWORD" \
+                    --syncroot ./dist \
+                    --remote-root "$FTP_REMOTE" \
+                    $FTP_SERVER
