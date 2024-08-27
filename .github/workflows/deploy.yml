@@ -1,0 +1,51 @@
+name: Deploy Astro Site to cPanel
+
+on:
+    push:
+        branches:
+            - main
+            - dev
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Set up env
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y git-ftp
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: "18"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build Astro project
+              run: npm run build
+
+            - name: Upload Artifact
+              uses: actions/upload-artifact@master
+              with:
+                  name: penguin-artifact
+                  path: dist
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download Artifact
+              uses: actions/download-artifact@master
+              with:
+                  name: penguin-artifact
+                  path: dist
+
+            - name: Deploy via FTP
+              uses: SamKirkland/FTP-Deploy-Action@4.2.0
+              with:
+                  local-dir: dist/
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  server: ${{ secrets.FTP_SERVER }}
+                  server-dir: ${{ github.ref == 'refs/heads/master' && '/' || '/test/' }}
