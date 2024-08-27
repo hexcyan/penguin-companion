@@ -3,7 +3,7 @@ name: Deploy Astro Site to cPanel
 on:
     push:
         branches:
-            - main
+            - master
             - dev
 
 jobs:
