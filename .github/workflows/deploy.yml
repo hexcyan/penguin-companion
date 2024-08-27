@@ -40,8 +40,11 @@ jobs:
               with:
                   name: penguin-artifact
                   path: dist
-            - name: List build directory
-              run: ls dist
+
             - name: Deploy via FTP
-              run: |
-                  git ftp push --user ${{ secrets.FTP_SERVER }} --passwd ${{ secrets.FTP_USERNAME }} --syncroot dist/ ${{ secrets.FTP_PASSWORD }}
+              uses: SamKirkland/FTP-Deploy-Action@4.2.0
+              with:
+                  local-dir: dist/
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  server: ${{ secrets.FTP_SERVER }}
