@@ -1,14 +1,15 @@
 ---
-const { word, hoverText } = Astro.props;
+const { word, hoverText, float = "right" } = Astro.props;
 
 function fix(text: string) {
     return text
         .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-        .replace(/\*(.*?)\*/g, "<em>$1</em>");
+        .replace(/\*(.*?)\*/g, "<em>$1</em>")
+        .replace(/\^{(.*?)}/g, "<sup>$1</sup>");
 }
 ---
 
 <span class="tooltip-container" tabindex="0">
     <Fragment class="tooltip-trigger" set:html={`${fix(word)}*`} />
-    <div class="toolTip" set:html={fix(hoverText)} />
+    <div class=`toolTip tooltip-${float}` set:html={fix(hoverText)} />
 </span>
