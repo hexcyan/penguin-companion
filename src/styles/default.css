@@ -166,7 +166,7 @@ body {
 }
 
 .content-box > article {
-    max-width: 38em;
+    max-width: 40em;
     padding: 0 64px;
     height: fit-content;
     font-family: "Lora", serif;
@@ -232,8 +232,8 @@ body {
     width: 32px !important;
     height: 32px !important;
     margin-right: 18px !important;
-    filter: brightness(0) saturate(100%) invert(56%) sepia(9%) saturate(1290%)
-        hue-rotate(224deg) brightness(91%) contrast(84%);
+    filter: brightness(0) saturate(100%) invert(56%) sepia(9%) saturate(1290%) hue-rotate(224deg) brightness(91%)
+        contrast(84%);
 }
 
 .profile img {
@@ -322,7 +322,7 @@ table {
 
 th,
 td {
-    padding: 0 16px;
+    padding: 0 12px;
 }
 
 details {
@@ -479,11 +479,11 @@ details[open] summary::before {
 /* Tooltip */
 .tooltip-container {
     position: relative;
-    display: inline-flex;
+    display: inline;
     cursor: pointer;
 }
 
-.toolTip {
+.tooltip {
     visibility: hidden;
     width: max-content;
     max-width: 12.5em;
@@ -517,7 +517,7 @@ details[open] summary::before {
 
 .tooltip-top {
     left: -50%;
-    transform: translateY(-102%);
+    transform: translateY(-115%);
 }
 
 .tooltip-bottom {
@@ -525,12 +525,12 @@ details[open] summary::before {
     transform: translateY(18%);
 }
 
-.toolTip a {
+.tooltip a {
     text-decoration: underline;
     color: #ffc767;
 }
 
-.toolTip::after {
+.tooltip::after {
     content: "";
     position: absolute;
     border-style: solid;
@@ -552,7 +552,7 @@ details[open] summary::before {
 
 .tooltip-top::after {
     left: 50%;
-    bottom: -7%;
+    bottom: -6%;
     border-top: #333 5px solid;
 }
 
@@ -562,8 +562,8 @@ details[open] summary::before {
     border-bottom: #333 5px solid;
 }
 
-.tooltip-container:focus-within .toolTip,
-.tooltip-container:hover .toolTip {
+.tooltip-container:focus-within .tooltip,
+.tooltip-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }

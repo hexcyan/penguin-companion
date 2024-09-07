@@ -2,6 +2,7 @@
 import WordHover from "./WordHover.astro";
 import wordsJson from "./words.json";
 import WordSpan from "./WordSpan.astro";
+import { fix } from "./util.tsx";
 interface Word {
     en: string;
     phon?: string;
@@ -38,16 +39,17 @@ const wordData: Word | undefined = words[word];
                 if (key === "en" && wordData.note) {
                     return (
                         <td>
-                            <WordHover
-                                word={`${value}`}
-                                hoverText={wordData.note}
-                            />
+                            <WordHover word={`${value}`} hoverText={wordData.note} />
                         </td>
                     );
                 }
 
                 if (key === "phon") {
-                    return <td>[{value}]</td>;
+                    return (
+                        <td>
+                            [<Fragment set:html={`${fix(value)}`} />]
+                        </td>
+                    );
                 }
 
                 return <td>{value}</td>;

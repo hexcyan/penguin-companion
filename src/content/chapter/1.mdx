@@ -18,21 +18,24 @@ export const map1 = {
     },
     ё: {
         word: "[yo] as in **yo**nder",
-        hover: "Russians normally omit the two dots, so in books, newspapers etc. this letter *looks* the same as **e** [ye]; however, the dots are printed in dictionaries and books for foreigners"
+        hover: "Russians normally omit the two dots, so in books, newspapers etc. this letter *looks* the same as **e** [ye]; however, the dots are printed in dictionaries and books for foreigners",
+    },
+    й: {
+        word: "[y] as in bo**y**",
+        hover: "**й** forms diphthongs, so **óй** sounds like [y] in b**oy**, **ай** sounds like the igh in s**igh**, **уй** [ooi] sounds like oui in the name L**oui**s",
     },
     ъ: {
         word: "'hard sign'",
-        hover: "this letter has no sound of its own but represents a very short pause"
-    }, 
+        hover: "this letter has no sound of its own but represents a very short pause",
+    },
     ь: {
         word: "'soft sign'",
-        hover: "[y] as in **y**et, but pronounced simultaneously with the letter before it - so **нь** sounds like [ny] in ca**ny**on. Try not to separate the [y] from the preceding letter, particularly at the ends of words; to remid you of this, we shall show the **ь** as a small raised ^y in our transcripts, e.g. **сóль** 'salt' [**sol^y**]"
-    }, 
+        hover: "[y] as in **y**et, but pronounced simultaneously with the letter before it - so **нь** sounds like [ny] in ca**ny**on. Try not to separate the [y] from the preceding letter, particularly at the ends of words; to remid you of this, we shall show the **ь** as a small raised ^{y} in our transcripts, e.g. **сóль** 'salt' [**sol^{y}**]",
+    },
     tr: {
         word: "transliteration",
-        hover: "For comparison, in the phonetic *transcription* used i this book, this name would be **[na-tál<sup>y</sup>a>**"
-    }
-
+        hover: "For comparison, in the phonetic *transcription* used in this book, this name would be **[na-tál^{y}a yev-gyé-n^{y}e-va hroo-shshyó-va].**",
+    },
 };
 
 <details open>
@@ -120,7 +123,7 @@ It is worth going through these lists twice, since you will meet all these usefu
 |    Ё    |   ё   | <WordHover word={map1["ё"].word} hoverText={map1["ё"].hover} /> |
 |    З    |   з   | [z] as in **z**oo                                               |
 |    И    |   и   | [ee] as in **ee**l                                              |
-|    Й    |   й   | [y] as in bo**y**\*                                             |
+|    Й    |   й   | <WordHover word={map1["й"].word} hoverText={map1["й"].hover} /> |
 |    Л    |   л   | [l] as in peop**l**e                                            |
 |    П    |   п   | [p] as in **p**et                                               |
 |    Ф    |   ф   | [f] as in **f**at                                               |
@@ -145,9 +148,9 @@ Examples:
     <WordRow word="зима" />
     <WordRow word="Белфаст" />
     <WordRow word="я знаю" />
-    <WordRow word="Аерофлот" />
+    <WordRow word="Аэрофлот" />
     <WordRow word="ликёр" />
-    <WordRow word="самолет" />
+    <WordRow word="самолёт" />
     <WordRow word="бойкот" />
     <WordRow word="парк" />
     <WordRow word="киоск" />
@@ -204,7 +207,7 @@ Now try this practice exercise. Cover the transcription (and the translation) on
     <WordRow word="календарь" />
     <WordRow word="перестройка" />
     <WordRow word="гласность" />
-    <WordRow word="Украйна" />
+    <WordRow word="Украина" />
     <WordRow word="Сибирь" />
     <WordRow word="Манчестер" />
     <WordRow word="Ливерпуль" />
@@ -225,9 +228,23 @@ Now try this practice exercise. Cover the transcription (and the translation) on
 
 Here is the Russian (Cyrillic) alphabet in its normal dictionary order. Cover the transcription on the right and check your pronunciation of the thirty-three letters again. To help you learn the order of the letters, notice that it is similar to the Latin alphabet as far as letter no. 21 (**у**), so you should concentrate on the letters from **Ф**.
 
+|     |         |      |     |         |      |     |         |                           |
+| --- | ------- | ---- | --- | ------- | ---- | --- | ------- | ------------------------- |
+| 1   | **А а** | [a]  | 12  | **К к** | [k]  | 23  | **Х х** | [h] as in lo**ch**        |
+| 2   | **Б б** | [b]  | 13  | **Л л** | [l]  | 24  | **Ц ц** | [ts]                      |
+| 3   | **В в** | [v]  | 14  | **М м** | [m]  | 25  | **Ч ч** | [ch] as in **ch**ur**ch** |
+| 4   | **Г г** | [g]  | 15  | **Н н** | [n]  | 26  | **Ш ш** | [sh]                      |
+| 5   | **Д д** | [d]  | 16  | **О о** | [o]  | 27  | **Щ щ** | [shsh]                    |
+| 6   | **Е е** | [ye] | 17  | **П п** | [p]  | 28  | **Ъ ъ** | hard sign - brief pause   |
+| 7   | **Ё ё** | [yo] | 18  | **Р р** | [r]  | 29  | **Ы ы** | [i]                       |
+| 8   | **Ж ж** | [zh] | 19  | **С с** | [s]  | 30  | **Ь ь** | [y] as in can**y**on      |
+| 9   | **З з** | [z]  | 20  | **Т т** | [t]  | 31  | **Э э** | [e]                       |
+| 10  | **И и** | [ee] | 21  | **У у** | [oo] | 32  | **Ю ю** | [yoo]                     |
+| 11  | **Й й** | [y]  | 22  | **Ф ф** | [f]  | 33  | **Я я** | [ya]                      |
+
 #### Russian Italics
 
-NOTE: In Russian italic printing, **г** is _г_, **д** is _д_, **и** is _и_, **й** is _й_, **л** is _л_, **п** is _п_, **т** is _т_. You will see in [Lesson 2](/chapter/2)
+NOTE: In Russian italic printing, **г** is _г_, **д** is _д_, **и** is _и_, **й** is _й_, **л** is _л_, **п** is _п_, **т** is _т_. You will see in [Lesson 2](/chapter/2) that most of these resemble the handwritten forms.
 
 </details>
 
@@ -297,8 +314,7 @@ In addition to the main material of the lesson, this book will also give you ext
 
 Above we gave only the _pronunciation_ of the letters. You need the names of the letters only when you read abbreviations (see Lesson 30), just as in English the letters pronounced [I], [b], [mj are read [ay-bee-em] in the abbreviation IBM.
 
-{/* fix inline hover */}
-Example of <WordHover word={map1["tr"].word} hoverText={map1["tr"].hover} /> (a woman’s name):
+<>Example of <WordHover word={map1["tr"].word} hoverText={map1["tr"].hover} float="top" /> (a woman’s name):</>
 
 l<sup>y</sup>a
 
