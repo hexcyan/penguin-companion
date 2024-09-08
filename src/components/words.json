@@ -31,7 +31,7 @@
         "audio": "/audios/1/нет.ogg"
     },
     "москва": {
-        "cap": "Москва",
+        "caps": "Москва",
         "phon": "mask-vá",
         "en": "Moscow",
         "audio": "/audios/1/москва.ogg"
@@ -71,7 +71,8 @@
         "en": "to you",
         "audio": "/audios/1/вам.ogg"
     },
-    "Вера": {
+    "вера": {
+        "caps": "Вера",
         "phon": "vyé-ra",
         "en": "Vera",
         "audio": "/audios/1/Вера.ogg"
@@ -81,7 +82,8 @@
         "en": "morning",
         "audio": "/audios/1/утро.ogg"
     },
-    "Нева": {
+    "нева": {
+        "caps": "Нева",
         "phon": "nye-vá",
         "en": "Neva (river in St Petersburg)",
         "audio": "/audios/1/Нева.ogg"
@@ -127,32 +129,38 @@
         "note": "(до has no stress so it is pronounced like [da])",
         "audio": "/audios/1/до_свидания.ogg"
     },
-    "Югославия": {
+    "югославия": {
+        "caps": "Югославия",
         "phon": "yoo-ga-slá-vee-ya",
         "en": "Yugoslavia",
         "audio": "/audios/1/Югославия.ogg"
     },
-    "Александр": {
+    "александр": {
+        "caps": "Александр",
         "phon": "a-lye-ksándr",
         "en": "Alexander",
         "audio": "/audios/1/Александр.ogg"
     },
     "спутник": {
+        "caps": "Спутник",
         "phon": "spo´ot-neek",
         "en": "sputnik, travelling companion",
         "audio": "/audios/1/спутник.ogg"
     },
-    "Владивосток": {
+    "владивосток": {
+        "caps": "Владивосток",
         "phon": "vla-dee-va-stók",
         "en": "Vladivostok",
         "audio": "/audios/1/Владивосток.ogg"
     },
-    "Россия": {
+    "россия": {
+        "caps": "Россия",
         "phon": "ra-sse´e-ya",
         "en": "Russia",
         "audio": "/audios/1/Россия.ogg"
     },
-    "Толстой": {
+    "толстой": {
+        "caps": "Толстой",
         "phon": "tal-stóy",
         "en": "Tolstoi (author of War and Peace)",
         "audio": "/audios/1/Толстой.ogg"
@@ -162,7 +170,8 @@
         "en": "winter",
         "audio": "/audios/1/зима.ogg"
     },
-    "Белфаст": {
+    "белфаст": {
+        "caps": "Белфаст",
         "phon": "byel-fást",
         "en": "Belfast",
         "audio": "/audios/1/Белфаст.ogg"
@@ -172,7 +181,8 @@
         "en": "I know",
         "audio": "/audios/1/я знаю.ogg"
     },
-    "Аэрофлот": {
+    "аэрофлот": {
+        "caps": "Аэрофлот",
         "phon": "a-e-ra-flót",
         "en": "Aeroflot (the Russian airline)",
         "audio": "/audios/1/Аэрофлот.ogg"
@@ -203,7 +213,8 @@
         "en": "kiosk",
         "audio": "/audios/1/киоск.ogg"
     },
-    "Байкал": {
+    "байкал": {
+        "caps": "Байкал",
         "phon": "bay-kál",
         "en": "Baikal (lake in Siberia)",
         "audio": "/audios/1/Байкал.ogg"
@@ -213,7 +224,8 @@
         "en": "telephone",
         "audio": "/audios/1/телефон.ogg"
     },
-    "Правда": {
+    "правда": {
+        "caps": "Правда",
         "phon": "práv-da",
         "en": "Pravda (= truth)",
         "note": "<a href='https://en.wikipedia.org/wiki/Pravda'  target='_blank'>Pravda</a> is the name of a newspaper",
@@ -259,12 +271,14 @@
         "en": "champagne, sparkling wine",
         "audio": "/audios/1/шампанское.ogg"
     },
-    "Шотландия": {
+    "шотландия": {
+        "caps": "Шотландия",
         "phon": "shat-lán-dee-ya",
         "en": "Scotland",
         "audio": "/audios/1/Шотландия.ogg"
     },
-    "Шостакович": {
+    "шостакович": {
+        "caps": "Шостакович",
         "phon": "sha-sta-kó-veech",
         "en": "Shostakovich",
         "audio": "/audios/1/Шостакович.ogg"
@@ -285,7 +299,8 @@
         "en": "restaurants",
         "audio": "/audios/1/рестораны.ogg"
     },
-    "Крым": {
+    "крым": {
+        "caps": "Крым",
         "phon": "krim",
         "en": "Crimea",
         "audio": "/audios/1/Крым.ogg"
@@ -301,7 +316,8 @@
         "note": "(l^{y} is l+y pronounced simultaneously, like ly in the name Lyuba)",
         "audio": "/audios/1/большой.ogg"
     },
-    "Кремль": {
+    "кремль": {
+        "caps": "Кремль",
         "phon": "kryeml^{y}",
         "en": "the Kremlin",
         "audio": "/audios/1/Кремль.ogg"
@@ -312,7 +328,8 @@
         "note": "(**рь** = r+y pronounced together, one of the most difficult of Russian sounds)",
         "audio": "/audios/1/царь.ogg"
     },
-    "Владимир": {
+    "владимир": {
+        "caps": "Владимир",
         "phon": "Vla-de´e-meer",
         "en": "Vladimir",
         "audio": "/audios/1/Владимир.ogg"
@@ -342,72 +359,85 @@
         "en": "openness",
         "audio": "/audios/1/гласность.ogg"
     },
-    "Украина": {
+    "украина": {
+        "caps": "Украина",
         "phon": "oo-kra-e´e-na",
         "en": "Ukraine",
         "audio": "/audios/1/Украина.ogg"
     },
-    "Сибирь": {
+    "сибирь": {
         "phon": "see-be´er^{y}",
         "en": "Siberia",
         "audio": "/audios/1/Сибирь.ogg"
     },
-    "Волга": {
+    "волга": {
+        "caps": "Волга",
         "phon": "vól-ga",
         "en": "the Volga river",
         "audio": "/audios/1/Волга.ogg"
     },
-    "Манчестер": {
+    "манчестер": {
+        "caps": "Манчестер",
         "phon": "mán-chye-styer",
         "en": "Manchester",
         "audio": "/audios/1/Манчестер.ogg"
     },
-    "Бирмингем": {
+    "бирмингем": {
+        "caps": "Бирмингем",
         "phon": "be´er-meen-gyem",
         "en": "Birmingham",
         "audio": "/audios/1/Бирмингем.ogg"
     },
-    "Ливерпуль": {
+    "ливерпуль": {
+        "caps": "Ливерпуль",
         "phon": "lee-vyer-po´ol^{y}",
         "en": "Liverpool",
         "audio": "/audios/1/Ливерпуль.ogg"
     },
-    "Абердин": {
+    "абердин": {
+        "caps": "Абердин",
         "phon": "a-byer-de´en",
         "en": "Aberdeen",
         "audio": "/audios/1/Абердин.ogg"
     },
-    "Портсмут": {
+    "портсмут": {
+        "caps": "Портсмут",
         "phon": "pórt-smoot",
         "en": "Portsmouth",
         "audio": "/audios/1/Портсмут.ogg"
     },
-    "Филадельфия": {
+    "филадельфия": {
+        "caps": "Филадельфия",
         "phon": "fee-la-dyél^{y}-fee-ya",
         "en": "Philadelphia",
         "audio": "/audios/1/Филадельфия.ogg"
     },
-    "Майами": {
+    "майами": {
+        "caps": "Майами",
         "phon": "ma-yá-mee",
         "en": "Miami",
         "audio": "/audios/1/Майами.ogg"
     },
-    "Голуэй": {
+    "голуэй": {
+        "caps": "Голуэй",
         "phon": "gó-loo-ey",
         "en": "Galway",
         "audio": "/audios/1/Голуэй.ogg"
     },
-    "Дублин": {
+    "дублин": {
+        "caps": "Дублин",
         "phon": "doób-leen",
         "en": "Dublin",
         "audio": "/audios/1/Дублин.ogg"
     },
-    "Мельбурн": {
+    "мельбурн": {
+        "caps": "Мельбурн",
         "phon": "myél^{y}-boorn",
         "en": "Melbourne",
         "audio": "/audios/1/Мельбурн.ogg"
     },
-    "Перт": {
+    "перт": {
+        "caps": "Перт",
         "phon": "pyert",
         "en": "Perth",
         "audio": "/audios/1/Перт.ogg"
@@ -426,5 +456,143 @@
         "phon": "dó-bra-ye o´o-tra",
         "en": "good morning",
         "audio": "/audios/1/доброе утро.ogg"
+    },
+    "борис": {
+        "caps": "Борис",
+        "phon": "ba-re'es",
+        "en": "Boris",
+        "audio": "/audios/1/Борис.ogg"
+    },
+    "русская азбука": {
+        "phon": "ro'o-ska-ya áz-boo-ka",
+        "en": "Russian alphabet",
+        "audio": "/audios/1/русская_азбука.ogg"
+    },
+    "аэропорт": {
+        "phon": "a-e-ra-pórt",
+        "en": "airport",
+        "audio": "/audios/1/аэеропорт.ogg"
+    },
+    "буфет": {
+        "phon": "boo-fyét",
+        "en": "buffet",
+        "audio": "/audios/1/буфет.ogg"
+    },
+    "директор": {
+        "phon": "dee-ryé-ktar",
+        "en": "director",
+        "audio": "/audios/1/директор.ogg"
+    },
+    "закрыто": {
+        "phon": "za-krí-ta",
+        "en": "closed",
+        "audio": "/audios/1/закрыто.ogg"
+    },
+    "запренщено": {
+        "phon": "za-prye-shshye-nó",
+        "en": "prohibited",
+        "audio": "/audios/1/запренщено.ogg"
+    },
+    "интурист": {
+        "phon": "een-too-re'est",
+        "en": "intourist",
+        "audio": "/audios/1/интурист.ogg"
+    },
+    "к себе": {
+        "phon": "ksye-byé",
+        "en": "pull, to you",
+        "audio": "/audios/1/к_себе.ogg"
+    },
+    "не курить": {
+        "phon": "nye koo-re'et^{y}",
+        "en": "no smoking",
+        "audio": "/audios/1/не_курить.ogg"
+    },
+    "от себя": {
+        "phon": "at-sye-byá",
+        "en": "push,from you",
+        "audio": "/audios/1/от_себя.ogg"
+    },
+    "парикмахерская": {
+        "phon": "pa-reek-má-hyer-ska-ya",
+        "en": "hairdresser/barber",
+        "audio": "/audios/1/парикмахерская.ogg"
+    },
+    "почта": {
+        "phon": "póch-ta",
+        "en": "post office",
+        "audio": "/audios/1/почта.ogg"
+    },
+    "ремонт": {
+        "phon": "rye-mónt",
+        "en": "(closed for) repairs",
+        "audio": "/audios/1/ремонт.ogg"
+    },
+    "бар": {
+        "phon": "bar",
+        "en": "bar",
+        "audio": "/audios/1/бар.ogg"
+    },
+    "такси": {
+        "phon": "takse'e",
+        "en": "taxi",
+        "audio": "/audios/1/такси.ogg"
+    },
+    "стоп": {
+        "phon": "stop",
+        "en": "stop",
+        "audio": "/audios/1/стоп.ogg"
+    },
+    "лос анджелес": {
+        "phon": "los andzhelés",
+        "en": "Los Angeles",
+        "audio": "/audios/1/лос_анджелес.ogg"
+    },
+    "пицца хат": {
+        "phon": "pitsa hat",
+        "en": "pizza hut",
+        "audio": "/audios/1/пицца_хат.ogg"
+    },
+    "владимир ленин": {
+        "caps": "Владимир Ленин",
+        "phon": "vla-de'e-meer lyé-neen",
+        "en": "Vladimir Lenin",
+        "audio": "/audios/1/владимир_ленин.ogg"
+    },
+    "известия": {
+        "caps": "ИЗВЕСТИЯ",
+        "phon": "eez-vyé-stee-ya",
+        "en": "IZVESTIYA (newspaper)",
+        "audio": "/audios/1/известия.ogg"
+    },
+    "нью-йорк": {
+        "caps": "Нью-Йорк",
+        "phon": "n^{y}yoo-yórk",
+        "en": "New York",
+        "audio": "/audios/1/нью-йорк.ogg"
+    },
+    "роллс-ройс": {
+        "caps": "Роллс-Ройс",
+        "phon": "rólls-róys",
+        "en": "Rolls-Royce",
+        "audio": "/audios/1/роллс-ройс.ogg"
+    },
+    "битлз": {
+        "caps": "Битлз",
+        "phon": "be'etl-z",
+        "en": "The Beatles",
+        "audio": "/audios/1/битлз.ogg"
+    },
+    "шекспир": {
+        "caps": "Шекспир",
+        "phon": "shéks-peer",
+        "en": "Shakespeare",
+        "audio": "/audios/1/шекспир.ogg"
+    },
+    "хельсинки": {
+        "caps": "Хельсинки",
+        "phon": "hyél^{y}-seen-kee",
+        "en": "Helsinki",
+        "audio": "/audios/1/хельсинки.ogg"
     }
 }

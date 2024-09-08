@@ -1,30 +1,18 @@
 ---
-import WordHover from "./WordHover.astro";
 import wordsJson from "./words.json";
 import WordSpan from "./WordSpan.astro";
-import { fix } from "./util.tsx";
+import { fix, type Word, type mapType } from "./util.tsx";
 import "../styles/default.css";
-
-interface Word {
-    en: string;
-    phon?: string;
-    audio: string;
-    stress?: string;
-    note?: string;
-}
-
-type mapType = {
-    [key: string]: Word;
-};
 
 const words = wordsJson as mapType;
 
 interface Props {
     word: string;
+    columns?: number[];
 }
 
 const { word } = Astro.props;
-const wordData: Word | undefined = words[word];
+const wordData: Word | undefined = words[word.toLowerCase()];
 ---
 
 <tr class="wordRow">
@@ -32,12 +20,11 @@ const wordData: Word | undefined = words[word];
         <WordSpan word={word} wordAudio={wordData?.audio} />
     </td>
 
-    <!-- Spoiler + Click to reveal -->
-
     {
         wordData ? (
-            Object.entries(wordData).map(([key, value]) => {
-                if (key === "audio" || key === "note") {
+            // Keep track of the column index
+            Object.entries(wordData).map(([key, value], index) => {
+                if (key === "audio" || key === "note" || key === "caps") {
                     return null;
                 }
 

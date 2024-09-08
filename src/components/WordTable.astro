@@ -1,11 +1,13 @@
 ---
 const tableId = Math.random().toString(36).substring(2, 9);
 
+// Include word and set columns to hide (optional)
 interface Props {
     headings: string[];
+    columns?: number[];
 }
 
-const { headings } = Astro.props;
+const { headings, columns } = Astro.props;
 ---
 
 <div class="reveal-all" data-table={tableId}>👁️ Show Answers</div>
@@ -19,7 +21,8 @@ const { headings } = Astro.props;
             }
         </tr>
     </thead>
-    <slot />
+
+    <slot data-columns={columns} />
 </table>
 
 <style>
@@ -33,6 +36,7 @@ const { headings } = Astro.props;
         padding: 4px;
         margin: 4px;
         border-radius: 4px;
+        background-color: var(--light-100);
     }
 </style>
 
@@ -55,7 +59,7 @@ const { headings } = Astro.props;
                             cell.classList.remove("hidden-cell");
                             cell.classList.add("revealed-cell");
                             // Set button text to hide all answers
-                            target.innerText = "👁️ Hide Answers";
+                            target.innerText = "😎 Hide Answers";
                         } else {
                             // Hide all
                             cell.classList.remove("revealed-cell");

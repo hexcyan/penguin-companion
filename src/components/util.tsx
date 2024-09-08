@@ -4,3 +4,16 @@ export function fix(text: string) {
         .replace(/\*(.*?)\*/g, "<em>$1</em>")
         .replace(/\^\{(.*?)\}/g, "<sup>$1</sup>");
 }
+
+export interface Word {
+    en: string;
+    caps?: string;
+    phon?: string;
+    audio: string;
+    stress?: string;
+    note?: string;
+}
+
+export type mapType = {
+    [key: string]: Word;
+};
