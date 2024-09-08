@@ -30,7 +30,8 @@
         "en": "no",
         "audio": "/audios/1/нет.ogg"
     },
-    "Москва": {
+    "москва": {
+        "cap": "Москва",
         "phon": "mask-vá",
         "en": "Moscow",
         "audio": "/audios/1/москва.ogg"

@@ -7,6 +7,9 @@ description: "Alphabet and Pronounciation; Transliteraion; Street Signs"
 import WordSpan from "../../components/WordSpan.astro";
 import WordRow from "../../components/WordRow.astro";
 import WordHover from "../../components/WordHover.astro";
+import WordReveal from "../../components/WordReveal.astro";
+import WordTable from "../../components/WordTable.astro";
+
 export const map1 = {
     о: {
         word: "[o] as in b**o**ttle",
@@ -257,45 +260,63 @@ NOTE: In Russian italic printing, **г** is _г_, **д** is _д_, **и** is _и_
 
 Read the following words. Can you translate them?
 
-1.  [ ] Борис /spoiler[audio, phonetic, english]
-2.  [ ] Борис /spoiler[audio, phonetic, english]
-3.  [ ] Борис /spoiler[audio, phonetic, english]
-4.  [ ] Борис /spoiler[audio, phonetic, english]
-5.  [ ] Борис /spoiler[audio, phonetic, english]
-6.  [ ] Борис /spoiler[audio, phonetic, english]
-7.  [ ] Борис /spoiler[audio, phonetic, english]
-8.  [ ] Борис /spoiler[audio, phonetic, english]
-9.  [ ] Борис /spoiler[audio, phonetic, english]
-10. [ ] Борис /spoiler[audio, phonetic, english]
+<WordTable headings={["Word", "Pronounciation", "Meaning"]}>
+    {/* <WordReveal word="Борис" /> */}
+    <WordReveal word="да" />
+    <WordReveal word="нет" />
+    <WordReveal word="большой" />
+    <WordReveal word="спасибо" />
+    {/* <WordReveal word="русская азбука" /> */}
+    <WordReveal word="борщ" />
+    <WordReveal word="чай" />
+    <WordReveal word="сахар" />
+</WordTable>
 
 ### EXERCISE 1/2
 
 Here are some common signs. Check your pronunciation by clicking on the speaker button.
 
-1. <WordRow word="АЭЕРОПОРТ" />{" "}
-2. <WordRow word="БУФЕТ" />{" "}
-3. <WordRow word="ГОСТИНИЦА" />{" "}
-4. <WordRow word="ДИРЕКТОР" />{" "}
-5. <WordRow word="ЗАКРЫТО" />{" "}
-6. <WordRow word="ЗАПРЕНЩЕНО" />{" "}
-7. <WordRow word="ИНТУРИСТ" />{" "}
-8. <WordRow word="КАССА" />{" "}
-9. <WordRow word="К СЕБЕ" />{" "}
-10. <WordRow word="НЕ КУРИТЬ" />{" "}
-11. <WordRow word="ОТ СЕБЯ" />{" "}
-12. <WordRow word="ПАРИКМАХЕРСКАЯ" />{" "}
-13. <WordRow word="ПОЧТА" />{" "}
-14. <WordRow word="РЕМОНТ" />{" "}
-15. <WordRow word="РЕСТОРАН" />{" "}
-16. <WordRow word="ТУАЛЕТ" />{" "}
+<table>
+    <WordRow word="АЭЕРОПОРТ" />
+    <WordRow word="БУФЕТ" />
+    <WordRow word="ГОСТИНИЦА" />
+    <WordRow word="ДИРЕКТОР" />
+    <WordRow word="ЗАКРЫТО" />
+    <WordRow word="ЗАПРЕНЩЕНО" />
+    <WordRow word="ИНТУРИСТ" />
+    <WordRow word="КАССА" />
+    <WordRow word="К СЕБЕ" />
+    <WordRow word="НЕ КУРИТЬ" />
+    <WordRow word="ОТ СЕБЯ" />
+    <WordRow word="ПАРИКМАХЕРСКАЯ" />
+    <WordRow word="ПОЧТА" />
+    <WordRow word="РЕМОНТ" />
+    <WordRow word="РЕСТОРАН" />
+    <WordRow word="ТУАЛЕТ" />
+</table>
 
 ### EXERCISE 1/3
 
 What do these say?
 
-1.
-2.
-3.
+<table>
+    <WordRow word="БАР" />
+    <WordRow word="ПРАВДА" />
+    <WordRow word="ГОСТИНИЦА" />
+    <WordRow word="ДИРЕКТОР" />
+    <WordRow word="ЗАКРЫТО" />
+    <WordRow word="ЗАПРЕНЩЕНО" />
+    <WordRow word="ИНТУРИСТ" />
+    <WordRow word="КАССА" />
+    <WordRow word="К СЕБЕ" />
+    <WordRow word="НЕ КУРИТЬ" />
+    <WordRow word="ОТ СЕБЯ" />
+    <WordRow word="ПАРИКМАХЕРСКАЯ" />
+    <WordRow word="ПОЧТА" />
+    <WordRow word="РЕМОНТ" />
+    <WordRow word="РЕСТОРАН" />
+    <WordRow word="ТУАЛЕТ" />
+</table>
 
 </details>
 
@@ -303,6 +324,8 @@ What do these say?
 <summary>
 ## Extra
 </summary>
+
+---
 
 In addition to the main material of the lesson, this book will also give you extra information which is not essential to a basic competence in Russian. If you choose to skip these parts, marked EXTRA, or to return to them later, your progress through the lessons will not be hindered.
 
@@ -312,10 +335,47 @@ In addition to the main material of the lesson, this book will also give you ext
 
 **1. The names of the Russian letters**
 
-Above we gave only the _pronunciation_ of the letters. You need the names of the letters only when you read abbreviations (see Lesson 30), just as in English the letters pronounced [I], [b], [mj are read [ay-bee-em] in the abbreviation IBM.
+Above we gave only the _pronunciation_ of the letters. You need the names of the letters only when you read abbreviations (see Lesson 30), just as in English the letters pronounced **[i], [b], [m]** are read **[ay-bee-em]** in the abbreviation IBM.
 
+|         |                 |         |      |         |                 |
+| ------- | --------------- | ------- | ---- | ------- | --------------- |
+| **А а** | [a]             | **К к** | [ka] | **Х х** | [ha]            |
+| **Б б** | [be]            | **Л л** | [el] | **Ц ц** | [tse]           |
+| **В в** | [ve]            | **М м** | [em] | **Ч ч** | [che]           |
+| **Г г** | [ge]            | **Н н** | [en] | **Ш ш** | [sha]           |
+| **Д д** | [de]            | **О о** | [o]  | **Щ щ** | [shsha]         |
+| **Е е** | [ye]            | **П п** | [pe] | **Ъ ъ** | [tvyór-di znak] |
+| **Ё ё** | [yo]            | **Р р** | [er] | **Ы ы** | [yerí]          |
+| **Ж ж** | [zhe]           | **С с** | [es] | **Ь ь** | [myáh-kee znak] |
+| **З з** | [ze]            | **Т т** | [te] | **Э э** | [e]             |
+| **И и** | [ee]            | **У у** | [oo] | **Ю ю** | [yoo]           |
+| **Й й** | [ee krát-ka-ye] | **Ф ф** | [ef] | **Я я** | [ya]            |
+
+So, СССР, the name of the country, is pronounced [es-es-es-ér]. **КГБ** (= KGB) is pronounced [ka-ge-be].
+
+**2. Transliteration of Russian in English letters**
+
+Transliteration is the representation of Russian _letters_ by English ones, for example when spelling the names of Russian people and places in English newspapers. _Transcription_ (or ‘phonetic transcription’) is the representation of Russian _sounds_ , for example to help foreigners learn to pronounce correctly. Since there are a number of differences between Russian spelling and Russian pronunciation (see Lesson 2), transliteration and transcription can never be the same thing. There are various standard ways of transliterating Russian into English letters. The American Library of Congress system is now generally preferred by those professionals, e.g. compilers of library catalogues, who need to worry about such things as how to spell Russian names consistently in English. Most of the equivalents in the list below are obvious from the pronunciation; those which are not, or which are transliterated differently in other systems, are marked with an asterisk (\*):
+
+|     |         |     |     |         |     |     |         |               |
+| --- | ------- | --- | --- | ------- | --- | --- | ------- | ------------- |
+|     | **А а** | a   |     | **К к** | ka  | \*  | **Х х** | ha            |
+|     | **Б б** | b   |     | **Л л** | el  |     | **Ц ц** | tse           |
+|     | **В в** | v   |     | **М м** | em  |     | **Ч ч** | che           |
+|     | **Г г** | g   |     | **Н н** | en  |     | **Ш ш** | sha           |
+|     | **Д д** | d   |     | **О о** | o   | \*  | **Щ щ** | shsha         |
+| \*  | **Е е** | d   |     | **П п** | pe  | \*  | **Ъ ъ** | tvyór-di znak |
+| \*  | **Ё ё** | ë   |     | **Р р** | er  | \*  | **Ы ы** | yerí          |
+| \*  | **Ж ж** | zh  |     | **С с** | es  | \*  | **Ь ь** | myáh-kee znak |
+|     | **З з** | z   |     | **Т т** | te  |     | **Э э** | e             |
+| \*  | **И и** | i   | \*  | **У у** | oo  | \*  | **Ю ю** | yoo           |
+| \*  | **Й й** | i   |     | **Ф ф** | ef  | \*  | **Я я** | ia            |
+
+{/* prettier-ignore */}
 <>Example of <WordHover word={map1["tr"].word} hoverText={map1["tr"].hover} float="top" /> (a woman’s name):</>
 
-l<sup>y</sup>a
+**Наталья Евгеньева Хрущёва** = Natal'ia Evgen-eva Khrushchëva
+
+This system is used in this book for proper names (i.e. ‘Vania’ rather than ‘Vanya’ for **Ваня**), except where traditional spellings are likely to be much more familiar, e.g. ‘Yalta’ (rather than ‘Ialta’) for the town of Ялта in the Crimea.
 
 </details>

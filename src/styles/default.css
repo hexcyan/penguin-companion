@@ -232,8 +232,7 @@ body {
     width: 32px !important;
     height: 32px !important;
     margin-right: 18px !important;
-    filter: brightness(0) saturate(100%) invert(56%) sepia(9%) saturate(1290%) hue-rotate(224deg) brightness(91%)
-        contrast(84%);
+    filter: brightness(0) saturate(100%) invert(56%) sepia(9%) saturate(1290%) hue-rotate(224deg) brightness(91%) contrast(84%);
 }
 
 .profile img {
@@ -317,7 +316,7 @@ span.word > img {
 }
 
 table {
-    margin: 0 auto;
+    margin: 18px auto;
 }
 
 th,

@@ -1,0 +1,89 @@
+---
+import WordHover from "./WordHover.astro";
+import wordsJson from "./words.json";
+import WordSpan from "./WordSpan.astro";
+import { fix } from "./util.tsx";
+import "../styles/default.css";
+
+interface Word {
+    en: string;
+    phon?: string;
+    audio: string;
+    stress?: string;
+    note?: string;
+}
+
+type mapType = {
+    [key: string]: Word;
+};
+
+const words = wordsJson as mapType;
+
+interface Props {
+    word: string;
+}
+
+const { word } = Astro.props;
+const wordData: Word | undefined = words[word];
+---
+
+<tr class="wordRow">
+    <td>
+        <WordSpan word={word} wordAudio={wordData?.audio} />
+    </td>
+
+    <!-- Spoiler + Click to reveal -->
+
+    {
+        wordData ? (
+            Object.entries(wordData).map(([key, value]) => {
+                if (key === "audio" || key === "note") {
+                    return null;
+                }
+
+                if (key === "phon") {
+                    return (
+                        <td class="toggle-cell hidden-cell">
+                            [<Fragment set:html={`${fix(value)}`} />]
+                        </td>
+                    );
+                }
+
+                return <td class="toggle-cell hidden-cell">{value}</td>;
+            })
+        ) : (
+            <p style="color:red">{word} not found.</p>
+        )
+    }
+</tr>
+
+<style>
+    td.toggle-cell {
+        cursor: pointer;
+    }
+
+    td.hidden-cell {
+        background-color: black;
+        color: black;
+        user-select: none;
+    }
+
+    td.hidden-cell:hover {
+        background-color: var(--primary);
+        color: var(--primary);
+    }
+
+    td.revealed-cell {
+        color: black;
+    }
+</style>
+
+<script>
+    const td = document.querySelectorAll("td.hidden-cell");
+    td.forEach((el) => {
+        el.addEventListener("click", () => {
+            el.classList.toggle("hidden-cell");
+            el.classList.toggle("revealed-cell");
+        });
+    });
+</script>

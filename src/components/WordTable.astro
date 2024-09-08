@@ -1,0 +1,71 @@
+---
+const tableId = Math.random().toString(36).substring(2, 9);
+
+interface Props {
+    headings: string[];
+}
+
+const { headings } = Astro.props;
+---
+
+<div class="reveal-all" data-table={tableId}>👁️ Show Answers</div>
+<table id={tableId}>
+    <thead>
+        <tr>
+            {
+                headings.map((heading) => {
+                    return <th>{heading}</th>;
+                })
+            }
+        </tr>
+    </thead>
+    <slot />
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    .reveal-all {
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid black;
+        padding: 4px;
+        margin: 4px;
+        border-radius: 4px;
+    }
+</style>
+
+<script>
+    const revealAllButtons = document.querySelectorAll(".reveal-all");
+    revealAllButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            console.log("CLICKED BUTTON");
+            const target = e.target as HTMLElement;
+            const tableId = target.getAttribute("data-table");
+            if (tableId) {
+                const table = document.getElementById(tableId);
+                const cells = table?.querySelectorAll("td.toggle-cell");
+                if (cells) {
+                    const anyHidden = Array.from(cells).some((cell) => cell.classList.contains("hidden-cell"));
+                    console.log("cells", cells);
+                    cells?.forEach((cell) => {
+                        if (anyHidden) {
+                            // Reveal all
+                            cell.classList.remove("hidden-cell");
+                            cell.classList.add("revealed-cell");
+                            // Set button text to hide all answers
+                            target.innerText = "👁️ Hide Answers";
+                        } else {
+                            // Hide all
+                            cell.classList.remove("revealed-cell");
+                            cell.classList.add("hidden-cell");
+                            // Set button text to show answers
+                            target.innerText = "👁️ Show Answers";
+                        }
+                    });
+                }
+            }
+        });
+    });
+</script>
