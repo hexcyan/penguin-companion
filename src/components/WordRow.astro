@@ -2,17 +2,7 @@
 import WordHover from "./WordHover.astro";
 import wordsJson from "./words.json";
 import WordSpan from "./WordSpan.astro";
-interface Word {
-    en: string;
-    phon?: string;
-    audio: string;
-    stress?: string;
-    note?: string;
-}
-
-type mapType = {
-    [key: string]: Word;
-};
+import { fix, type Word, type mapType } from "./util.tsx";
 
 const words = wordsJson as mapType;
 
@@ -21,33 +11,35 @@ interface Props {
 }
 
 const { word } = Astro.props;
-const wordData: Word | undefined = words[word];
+
+const wordData: Word | undefined = words[word.toLowerCase()];
 ---
 
 <tr class="wordRow">
     <td>
-        <WordSpan word={word} wordAudio={wordData?.audio} />
+        <WordSpan word={wordData?.caps || word} wordAudio={wordData?.audio} />
     </td>
     {
         wordData ? (
             Object.entries(wordData).map(([key, value]) => {
-                if (key === "audio" || key === "note") {
+                if (key === "audio" || key === "note" || key === "caps") {
                     return null;
                 }
 
                 if (key === "en" && wordData.note) {
                     return (
                         <td>
-                            <WordHover
-                                word={`${value}`}
-                                hoverText={wordData.note}
-                            />
+                            <WordHover word={`${value}`} hoverText={wordData.note} />
                         </td>
                     );
                 }
 
                 if (key === "phon") {
-                    return <td>[{value}]</td>;
+                    return (
+                        <td>
+                            [<Fragment set:html={`${fix(value)}`} />]
+                        </td>
+                    );
                 }
 
                 return <td>{value}</td>;

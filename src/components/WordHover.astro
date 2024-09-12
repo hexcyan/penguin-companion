@@ -1,14 +1,9 @@
 ---
-const { word, hoverText } = Astro.props;
-
-function fix(text: string) {
-    return text
-        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-        .replace(/\*(.*?)\*/g, "<em>$1</em>");
-}
+const { word, hoverText, float = "right" } = Astro.props;
+import { fix } from "./util.tsx";
 ---
 
 <span class="tooltip-container" tabindex="0">
+    <div class=`tooltip tooltip-${float}` set:html={fix(hoverText)} />
     <Fragment class="tooltip-trigger" set:html={`${fix(word)}*`} />
-    <div class="toolTip" set:html={fix(hoverText)} />
 </span>

@@ -166,7 +166,7 @@ body {
 }
 
 .content-box > article {
-    max-width: 38em;
+    max-width: 40em;
     padding: 0 64px;
     height: fit-content;
     font-family: "Lora", serif;
@@ -216,10 +216,10 @@ body {
 }
 
 .contribute {
-    border-color:purple;
-    grid-column:span 2;
-    cursor:pointer;
-    box-shadow:0 0px 4px #6a00ff4b;
+    border-color: purple;
+    grid-column: span 2;
+    cursor: pointer;
+    box-shadow: 0 0px 4px #6a00ff4b;
     justify-content: space-between;
 }
 
@@ -316,12 +316,12 @@ span.word > img {
 }
 
 table {
-    margin: 0 auto;
+    margin: 18px auto;
 }
 
 th,
 td {
-    padding: 0 16px;
+    padding: 0 12px;
 }
 
 details {
@@ -358,7 +358,7 @@ details[open] summary::before {
 /* NEED TO CLEAN LATER RLY MESSY */
 .donations {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     gap: 16px;
     margin: 24px 0;
     height: 48px;
@@ -382,7 +382,7 @@ details[open] summary::before {
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: 
+    transition:
         background-color 0.3s ease,
         transform 0.3s ease,
         box-shadow 0.2s ease,
@@ -408,9 +408,9 @@ details[open] summary::before {
 }
 
 .donation-button.crypto {
-    background-color: #242424; 
+    background-color: #242424;
     color: #ffffff;
-    position:relative;
+    position: relative;
     z-index: 10;
 }
 
@@ -426,7 +426,7 @@ details[open] summary::before {
     transform: none;
 }
 
-.dropdown:hover .donation-button.crypto{
+.dropdown:hover .donation-button.crypto {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     z-index: 1000;
     box-shadow: 0 4px 6px #6c462480;
@@ -458,7 +458,7 @@ details[open] summary::before {
     box-shadow: 0px 4px 8px #302312af;
 }
 .donation-button.crypto:hover {
-    background-color: #242424; 
+    background-color: #242424;
     color: #ffffff;
 }
 
@@ -469,7 +469,6 @@ details[open] summary::before {
 
 .donation-button.bitcoin:hover {
     background-color: #f68132;
-
 }
 
 .donation-button.ethereum:hover {
@@ -479,11 +478,11 @@ details[open] summary::before {
 /* Tooltip */
 .tooltip-container {
     position: relative;
-    display: inline-block;
+    display: inline;
     cursor: pointer;
 }
 
-.toolTip {
+.tooltip {
     visibility: hidden;
     width: max-content;
     max-width: 12.5em;
@@ -494,34 +493,76 @@ details[open] summary::before {
     padding: 12px;
     z-index: 1;
     position: absolute;
-    left: 105%;
-    top: 50%;
-    transform: translateY(-10%);
     opacity: 0;
-    transition: opacity 0.2s ease, visibility 0.1s ease;
+    transition:
+        opacity 0.2s ease,
+        visibility 0.1s ease;
     white-space: normal;
     word-wrap: break-word;
     hyphens: auto;
 }
 
-.toolTip a {
+.tooltip-right {
+    left: 105%;
+    top: 50%;
+    transform: translateY(-10%);
+}
+
+.tooltip-left {
+    left: -205%;
+    top: 50%;
+    transform: translateY(-10%);
+}
+
+.tooltip-top {
+    left: -50%;
+    transform: translateY(-115%);
+}
+
+.tooltip-bottom {
+    left: -50%;
+    transform: translateY(18%);
+}
+
+.tooltip a {
     text-decoration: underline;
-    color:#ffc767;
+    color: #ffc767;
 }
 
-.toolTip::after {
-    content: '';
+.tooltip::after {
+    content: "";
     position: absolute;
-    top: 10%; 
-    left: -8px;
-    margin-top: -5px;
-    border-width: 5px;
     border-style: solid;
-    border-color: transparent #333 transparent transparent;
+    border-width: 5px;
+    border-color: transparent;
 }
 
-.tooltip-container:focus-within .toolTip,
-.tooltip-container:hover .toolTip {
+.tooltip-right::after {
+    top: 10%;
+    left: -8px;
+    border-right: #333 5px solid;
+}
+
+.tooltip-left::after {
+    top: 10%;
+    left: 100%;
+    border-left: #333 5px solid;
+}
+
+.tooltip-top::after {
+    left: 50%;
+    bottom: -6%;
+    border-top: #333 5px solid;
+}
+
+.tooltip-bottom::after {
+    left: 50%;
+    top: -7%;
+    border-bottom: #333 5px solid;
+}
+
+.tooltip-container:focus-within .tooltip,
+.tooltip-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }
