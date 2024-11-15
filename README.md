@@ -5,3 +5,11 @@
 The New Penguin Russian Course textbook is probably the most recommended textbook for new English-speaking learners but its biggest critique is the lack of accompanying audio.
 
 As someone using the book to learn, it was also _my_ biggest gripe. So I developed this resource with my friend to provide an easy-to-use site with matching audios :D
+
+
+**Latest Dev version** (Chapter 1 90% Complete - Missing some audio)
+
+* [https://penguin-test.hexcyan.xyz](https://penguin-test.hexcyan.xyz)
+
+**Master**
+* [https://penguin-companion.hexcyan.xyz](https://penguin-companion.hexcyan.xyz)
